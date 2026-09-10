@@ -1,24 +1,776 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weather Forecasting | Salma Elgezawy</title>
-<meta name="description" content="A practical forecasting project covering exploratory analysis, stationarity, seasonality, outlier handling, Prophet modeling, and interactive visualization.">
-<meta property="og:title" content="Weather Forecasting | Salma Elgezawy">
-<meta property="og:description" content="A practical forecasting project covering exploratory analysis, stationarity, seasonality, outlier handling, Prophet modeling, and interactive visualization.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#071013">
-<link rel="stylesheet" href="../assets/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Weather Forecasting | Salma Elgezawy
+    </title>
+
+    <meta
+        name="description"
+        content="An end-to-end weather forecasting project combining exploratory time-series analysis, seasonal decomposition, Prophet modeling, and interactive Streamlit visualization."
+    >
+
+    <meta
+        property="og:title"
+        content="Weather Forecasting | Salma Elgezawy"
+    >
+
+    <meta
+        property="og:description"
+        content="An end-to-end weather forecasting project combining exploratory time-series analysis, seasonal decomposition, Prophet modeling, and interactive Streamlit visualization."
+    >
+
+    <meta property="og:type" content="website">
+
+    <meta
+        name="theme-color"
+        content="#071013"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/style.css"
+    >
+
 </head>
+
+
 <body>
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="../index.html#home">Salma Elgezawy</a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu</button>
-<div class="nav-links">
-<a href="../index.html#home">Home</a><a href="../index.html#services">Services</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#achievements">Achievements</a><a href="../index.html#about">About</a>
-</div></div></nav><main><section class="case-head"><div class="container"><a class="back" href="../index.html#projects">← Back to Projects</a><span class="eyebrow">Time-Series Analysis and Interactive Forecasting</span><h1>Weather Forecasting</h1><p class="lead">A practical forecasting project covering exploratory analysis, stationarity, seasonality, outlier handling, Prophet modeling, and interactive visualization.</p><div class="tags"><span class="tag">Time Series</span><span class="tag">Forecasting</span><span class="tag">Data Analysis</span><span class="tag">Prophet</span></div><div class="case-visual cover cover-weather"></div></div></section>
-<section class="section" style="padding-top:30px"><div class="container case-layout"><div><section class="case-section"><h2>The Problem</h2><p class="muted">Weather data combines trend, seasonality, noise, and variable-specific behavior. This project explores a complete analysis and forecasting workflow rather than treating forecasting as a single model call.</p></section><section class="case-section"><h2>The Approach</h2><ul><li>Historical Delhi weather data for temperature, humidity, wind speed, and atmospheric pressure.</li><li>Time-series visualization, correlations, boxplots, stationarity analysis, seasonal decomposition, ACF/PACF exploration, and moving averages.</li><li>IQR-based outlier handling.</li><li>Separate Prophet models for individual weather variables.</li><li>Interactive Streamlit interface for forecast exploration.</li></ul></section><section class="case-section"><h2>Technical Decisions</h2><ul><li>EDA and stationarity checks were used to understand the temporal structure before forecasting.</li><li>Separate models allow each variable to retain its own time-series behavior.</li><li>The interface focuses on making forecasts easier to inspect rather than hiding the analytical workflow.</li></ul></section><section class="case-section"><h2>Results</h2><p class="muted">The project delivers an end-to-end time-series analysis and interactive forecasting workflow.</p></section><section class="case-section"><h2>Why It Matters</h2><p class="muted">It demonstrates practical forecasting, temporal data exploration, and user-facing visualization in one project.</p></section><section class="case-section"><h2>Visual Evidence</h2><p class="muted">Replace these placeholders with real screenshots, plots, hardware photos, or project videos.</p><div class="media-grid"><div class="media-ph">Time-Series EDA</div><div class="media-ph">Seasonal Decomposition</div><div class="media-ph">Forecast Plot</div><div class="media-ph">Streamlit Interface</div></div></section></div><aside class="sidebar"><div class="card"><span class="eyebrow">Technology Stack</span><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Prophet</span><span class="chip">Time-Series Analysis</span><span class="chip">Statistics</span><span class="chip">Streamlit</span></div></div><div style="margin-top:14px"><a class="btn btn-secondary" href="https://github.com/SalmaElgezawy/Weather_Forcasting" target="_blank" rel="noopener">View on GitHub ↗</a></div></aside></div></section>
-<section class="section"><div class="container"><div class="cta"><div><h2>Need a Similar Solution?</h2><p class="muted">If your project involves data, machine learning, forecasting, computer vision, NLP, or intelligent engineering systems, let’s discuss the problem and the right technical approach.</p></div><a class="btn btn-primary" href="https://golance.com/freelancer/salma.elgezawy" target="_blank" rel="noopener">Discuss Your Project ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div><strong>Salma Elgezawy — AI/ML Engineer</strong><br>Available for Remote Projects Worldwide</div><div>© Salma Elgezawy</div></div></footer>
-<script src="../assets/site.js"></script></body></html>
+
+
+<!-- =========================
+     Navigation
+========================= -->
+
+<nav class="nav">
+
+    <div class="container nav-inner">
+
+        <a
+            class="brand"
+            href="../index.html#home"
+        >
+            Salma Elgezawy
+        </a>
+
+
+        <button
+            class="menu-btn"
+            aria-label="Toggle navigation"
+        >
+            Menu
+        </button>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html#home">
+                Home
+            </a>
+
+            <a href="../index.html#services">
+                Services
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#skills">
+                Skills
+            </a>
+
+            <a href="../index.html#achievements">
+                Achievements
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<main>
+
+
+<!-- =========================
+     Case Study Header
+========================= -->
+
+<section class="case-head weather-case-head">
+
+    <div class="container">
+
+
+        <div class="weather-header-meta">
+
+            <a
+                class="back"
+                href="../index.html#projects"
+            >
+                ← Back to Projects
+            </a>
+
+            <span class="case-eyebrow">
+                TIME-SERIES ANALYSIS + INTERACTIVE FORECASTING
+            </span>
+
+        </div>
+
+
+
+        <h1>
+            Weather Forecasting
+        </h1>
+
+
+
+        <p class="lead case-lead">
+
+            An end-to-end time-series forecasting project exploring historical
+            weather patterns, seasonality, temporal structure, and Prophet-based
+            forecasting through an interactive Streamlit application.
+
+        </p>
+
+
+
+        <div class="tags">
+
+            <span class="tag">
+                Time Series
+            </span>
+
+            <span class="tag">
+                Forecasting
+            </span>
+
+            <span class="tag">
+                Data Analysis
+            </span>
+
+            <span class="tag">
+                Prophet
+            </span>
+
+            <span class="tag">
+                Streamlit
+            </span>
+
+        </div>
+
+
+
+        <!-- Hero Cover -->
+
+        <div class="case-visual weather-cover">
+
+            <img
+                src="../assets/weather.png"
+                alt="Weather forecasting project visualization"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     Main Case Study
+========================= -->
+
+<section class="section weather-case-content">
+
+    <div class="container case-layout">
+
+
+        <!-- =========================
+             Main Content
+        ========================= -->
+
+        <div>
+
+
+            <!-- Problem -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Problem
+                </h2>
+
+                <p class="muted">
+
+                    Weather observations evolve through multiple temporal
+                    patterns rather than following a simple linear trend.
+                    Temperature, humidity, wind speed, and atmospheric pressure
+                    exhibit different levels of seasonality, variability, noise,
+                    and outlier behavior. The challenge was therefore to build a
+                    forecasting workflow that first understands the temporal
+                    structure of the data before generating future predictions.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- Approach -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Approach
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Historical Delhi weather data containing temperature,
+                        humidity, wind speed, and atmospheric pressure observations.
+                    </li>
+
+                    <li>
+                        Exploratory time-series analysis to inspect temporal
+                        patterns and relationships between weather variables.
+                    </li>
+
+                    <li>
+                        Stationarity analysis, moving averages, seasonal
+                        decomposition, and ACF/PACF exploration.
+                    </li>
+
+                    <li>
+                        Outlier investigation and IQR-based preprocessing where
+                        appropriate.
+                    </li>
+
+                    <li>
+                        Independent Prophet forecasting models for weather
+                        variables with different temporal behavior.
+                    </li>
+
+                    <li>
+                        Comparison of forecast trajectories against historical
+                        observations.
+                    </li>
+
+                    <li>
+                        Development of an interactive Streamlit interface for
+                        selecting forecast dates and forecast horizons.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- Technical Decisions -->
+
+            <section class="case-section">
+
+                <h2>
+                    Technical Decisions
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Exploratory analysis was performed before modeling so
+                        forecasting decisions were based on the actual temporal
+                        structure of the dataset.
+                    </li>
+
+                    <li>
+                        Seasonal decomposition was used to separate long-term
+                        trend, recurring patterns, and residual variation.
+                    </li>
+
+                    <li>
+                        Weather variables were modeled separately because each
+                        variable exhibits different dynamics and levels of
+                        variability.
+                    </li>
+
+                    <li>
+                        Prophet was used to model trend and recurring temporal
+                        patterns while keeping the forecasting workflow
+                        interpretable.
+                    </li>
+
+                    <li>
+                        The Streamlit layer was designed to expose forecast
+                        parameters and results interactively rather than
+                        presenting only static model output.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- Results -->
+
+            <section class="case-section">
+
+                <h2>
+                    Results
+                </h2>
+
+                <p class="muted">
+
+                    The project produced an end-to-end forecasting workflow
+                    spanning historical data exploration, temporal decomposition,
+                    preprocessing, Prophet-based forecasting, forecast comparison,
+                    and interactive application delivery.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- Why It Matters -->
+
+            <section class="case-section">
+
+                <h2>
+                    Why It Matters
+                </h2>
+
+                <p class="muted">
+
+                    This project demonstrates that practical time-series
+                    forecasting extends beyond model training. Understanding
+                    seasonality, trends, anomalies, and variable-specific
+                    behavior is essential before forecasts can be interpreted
+                    meaningfully. The Streamlit application also demonstrates
+                    how analytical models can be converted into an accessible
+                    interface for exploring future predictions.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Experimental Evidence
+            ========================= -->
+
+            <section class="case-section weather-evidence">
+
+                <h2>
+                    Experimental Evidence
+                </h2>
+
+                <p class="muted weather-evidence-intro">
+
+                    Historical exploration, temporal decomposition, forecast
+                    comparison, and application-level visualization illustrate
+                    the complete workflow from understanding the weather data
+                    to presenting future forecasts.
+
+                </p>
+
+
+
+                <!-- =========================
+                     Time-Series Exploration
+                ========================= -->
+
+                <figure class="weather-evidence-card">
+
+                    <div class="weather-evidence-image">
+
+                        <img
+                            src="../assets/weather_stationarity.jpg"
+                            alt="Historical Delhi weather variables including temperature humidity wind speed and pressure"
+                        >
+
+                    </div>
+
+
+                    <figcaption>
+
+                        <span class="weather-evidence-label">
+                            TIME-SERIES EXPLORATION
+                        </span>
+
+                        <h3>
+                            Historical Weather Behavior
+                        </h3>
+
+                        <p>
+
+                            Historical observations of temperature, humidity,
+                            wind speed, and atmospheric pressure were explored
+                            to identify temporal patterns, variability, and
+                            potential anomalies before forecasting.
+
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- =========================
+                     Seasonal Decomposition
+                ========================= -->
+
+                <figure class="weather-evidence-card">
+
+                    <div class="weather-evidence-image">
+
+                        <img
+                            src="../assets/weather_st.jpg"
+                            alt="Seasonal decomposition of historical temperature time series"
+                        >
+
+                    </div>
+
+
+                    <figcaption>
+
+                        <span class="weather-evidence-label">
+                            TEMPORAL STRUCTURE
+                        </span>
+
+                        <h3>
+                            Seasonal Decomposition
+                        </h3>
+
+                        <p>
+
+                            Decomposition of the temperature series into the
+                            observed signal, long-term trend, seasonal behavior,
+                            and residual component helps reveal the structure
+                            underlying the raw time series.
+
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- =========================
+                     Forecast
+                ========================= -->
+
+                <figure class="weather-evidence-card">
+
+                    <div class="weather-evidence-image">
+
+                        <img
+                            src="../assets/weather_temp.jpg"
+                            alt="Prophet forecast compared with actual mean temperature observations"
+                        >
+
+                    </div>
+
+
+                    <figcaption>
+
+                        <span class="weather-evidence-label">
+                            FORECASTING
+                        </span>
+
+                        <h3>
+                            Prophet Forecast vs Actual Temperature
+                        </h3>
+
+                        <p>
+
+                            Forecasted mean-temperature values are compared with
+                            observed values to visually inspect how the Prophet
+                            model follows the broader temperature trend while
+                            smoothing short-term fluctuations.
+
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- =========================
+                     Streamlit Video Placeholder
+                ========================= -->
+
+                <figure class="weather-evidence-card">
+
+                <div class="weather-interface-video">
+
+                    <video
+                        controls
+                        preload="metadata"
+                    >
+                        <source
+                            src="../assets/videos/weather_interface.mkv"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video tag.
+
+                    </video>
+
+                </div>
+
+                <figcaption>
+
+                    <span class="weather-evidence-label">
+                        INTERACTIVE APPLICATION
+                    </span>
+
+                    <h3>
+                        Streamlit Forecasting Interface
+                    </h3>
+
+                    <p>
+                        Interactive forecasting workflow demonstrating date selection,
+                        forecast-horizon control, and visualization of generated weather
+                        predictions.
+                    </p>
+
+                </figcaption>
+
+            </figure>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             Sidebar
+        ========================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Project Scope -->
+
+            <div class="metric weather-metric">
+
+                <strong>
+                    4
+                </strong>
+
+                <span class="weather-metric-title">
+                    Weather Variables
+                </span>
+
+                <span class="weather-metric-sub">
+                    Temperature · Humidity · Wind · Pressure
+                </span>
+
+            </div>
+
+
+
+            <!-- Forecasting Context -->
+
+            <div class="card weather-context-card">
+
+                <span class="eyebrow">
+                    Forecasting Workflow
+                </span>
+
+                <p>
+
+                    Temporal exploration, seasonal analysis, preprocessing,
+                    variable-specific forecasting, and interactive prediction
+                    visualization.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Technology Stack -->
+
+            <div class="card">
+
+                <span class="eyebrow">
+                    Technology Stack
+                </span>
+
+                <div class="chips">
+
+                    <span class="chip">
+                        Python
+                    </span>
+
+                    <span class="chip">
+                        Pandas
+                    </span>
+
+                    <span class="chip">
+                        NumPy
+                    </span>
+
+                    <span class="chip">
+                        Prophet
+                    </span>
+
+                    <span class="chip">
+                        Time-Series Analysis
+                    </span>
+
+                    <span class="chip">
+                        Statistics
+                    </span>
+
+                    <span class="chip">
+                        Streamlit
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GitHub -->
+
+            <div class="weather-github">
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://github.com/SalmaElgezawy/Weather_Forcasting"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    View on GitHub ↗
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section case-cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+
+            <div class="cta-copy">
+
+                <h2>
+                    Need a Similar Solution?
+                </h2>
+
+                <p class="muted">
+
+                    If your project involves time-series analysis, forecasting,
+                    data exploration, predictive modeling, or interactive
+                    analytics, let’s discuss the problem and the right technical
+                    approach.
+
+                </p>
+
+            </div>
+
+
+
+            <a
+                class="btn btn-primary"
+                href="https://golance.com/freelancer/salma.elgezawy"
+                target="_blank"
+                rel="noopener"
+            >
+
+                Discuss Your Project ↗
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <strong>
+                Salma Elgezawy — AI/ML Engineer
+            </strong>
+
+            <br>
+
+            Available for Remote Projects Worldwide
+
+        </div>
+
+
+        <div>
+            © Salma Elgezawy
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="../assets/site.js"></script>
+
+
+</body>
+
+</html>

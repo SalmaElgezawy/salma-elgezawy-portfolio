@@ -1,24 +1,691 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chaotic System Forecasting | Salma Elgezawy</title>
-<meta name="description" content="A scientific machine-learning project exploring forecasting horizons in chaotic dynamics with Echo State Networks and physics-informed reservoir computing.">
-<meta property="og:title" content="Chaotic System Forecasting | Salma Elgezawy">
-<meta property="og:description" content="A scientific machine-learning project exploring forecasting horizons in chaotic dynamics with Echo State Networks and physics-informed reservoir computing.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#071013">
-<link rel="stylesheet" href="../assets/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Chaotic System Forecasting | Salma Elgezawy</title>
+
+    <meta
+        name="description"
+        content="A scientific machine-learning project exploring long-horizon forecasting in chaotic dynamics using Echo State Networks, physics-informed reservoir computing, and systematic optimization."
+    >
+
+    <meta property="og:title" content="Chaotic System Forecasting | Salma Elgezawy">
+
+    <meta
+        property="og:description"
+        content="A scientific machine-learning project exploring long-horizon forecasting in chaotic dynamics using Echo State Networks, physics-informed reservoir computing, and systematic optimization."
+    >
+
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#071013">
+
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
+
+
 <body>
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="../index.html#home">Salma Elgezawy</a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu</button>
-<div class="nav-links">
-<a href="../index.html#home">Home</a><a href="../index.html#services">Services</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#achievements">Achievements</a><a href="../index.html#about">About</a>
-</div></div></nav><main><section class="case-head"><div class="container"><a class="back" href="../index.html#projects">← Back to Projects</a><span class="eyebrow">Physics-Informed Forecasting of the Lorenz System</span><h1>Chaotic System Forecasting</h1><p class="lead">A scientific machine-learning project exploring forecasting horizons in chaotic dynamics with Echo State Networks and physics-informed reservoir computing.</p><div class="tags"><span class="tag">Time Series</span><span class="tag">Reservoir Computing</span><span class="tag">Physics-Informed ML</span><span class="tag">Optimization</span></div><div class="case-visual cover cover-chaos"></div></div></section>
-<section class="section" style="padding-top:30px"><div class="container case-layout"><div><section class="case-section"><h2>The Problem</h2><p class="muted">Chaotic systems are difficult to forecast because tiny changes in initial conditions can lead to rapidly diverging trajectories. The project investigates how reservoir computing and physics-informed constraints can extend useful forecasting horizons.</p></section><section class="case-section"><h2>The Approach</h2><ul><li>Lorenz-system simulation and forecasting experiments.</li><li>Conventional Echo State Networks (ESN) as a data-driven baseline.</li><li>Physics-Informed ESN (PI-ESN) with physical residuals derived from the governing dynamics.</li><li>Initial-condition experimentation and hyperparameter optimization with Optuna.</li><li>Evaluation in Lyapunov-time units to make the predictability horizon meaningful for chaotic dynamics.</li></ul></section><section class="case-section"><h2>Technical Decisions</h2><ul><li>The work uses Lyapunov time rather than only raw time to evaluate chaotic forecasting.</li><li>Paper-reported ESN and PI-ESN baselines are kept distinct from the achieved experimental result.</li><li>The project focuses on scientific reproducibility and careful forecasting diagnostics rather than a black-box score.</li></ul></section><section class="case-section"><h2>Results</h2><p class="muted">Referenced baselines were approximately 4.5 Lyapunov Times for ESN and 5.5 for PI-ESN. The developed experimental approach reached 6.0 Lyapunov Times.</p></section><section class="case-section"><h2>Why It Matters</h2><p class="muted">This work shows the value of combining dynamical-system knowledge with data-driven forecasting when modeling highly sensitive nonlinear systems.</p></section><section class="case-section"><h2>Visual Evidence</h2><p class="muted">Replace these placeholders with real screenshots, plots, hardware photos, or project videos.</p><div class="media-grid"><div class="media-ph">Lorenz Attractor Plot</div><div class="media-ph">True vs Predicted Trajectory</div><div class="media-ph">Forecast Error Curve</div><div class="media-ph">Experimental Comparison Figure</div></div></section></div><aside class="sidebar"><div class="metric"><strong>6 Lyapunov Times</strong><span>Experimental forecasting horizon</span></div><div class="card" style="margin-top:14px"><strong>Baseline distinction</strong><p class="muted">4.5 LT = referenced ESN baseline · 5.5 LT = referenced PI-ESN baseline · 6.0 LT = achieved experimental horizon.</p></div><div class="card"><span class="eyebrow">Technology Stack</span><div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Reservoir Computing</span><span class="chip">ESN</span><span class="chip">PI-ESN</span><span class="chip">Optuna</span><span class="chip">Scientific ML</span></div></div></aside></div></section>
-<section class="section"><div class="container"><div class="cta"><div><h2>Need a Similar Solution?</h2><p class="muted">If your project involves data, machine learning, forecasting, computer vision, NLP, or intelligent engineering systems, let’s discuss the problem and the right technical approach.</p></div><a class="btn btn-primary" href="https://golance.com/freelancer/salma.elgezawy" target="_blank" rel="noopener">Discuss Your Project ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div><strong>Salma Elgezawy — AI/ML Engineer</strong><br>Available for Remote Projects Worldwide</div><div>© Salma Elgezawy</div></div></footer>
-<script src="../assets/site.js"></script></body></html>
+
+
+<!-- =========================
+     Navigation
+========================= -->
+
+<nav class="nav">
+
+    <div class="container nav-inner">
+
+        <a class="brand" href="../index.html#home">
+            Salma Elgezawy
+        </a>
+
+        <button class="menu-btn" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#achievements">Achievements</a>
+            <a href="../index.html#about">About</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+
+    <!-- =========================
+         Case Study Header
+    ========================== -->
+
+    <section class="case-head chaos-case-head">
+
+        <div class="container">
+
+            <div class="case-header-meta">
+
+                <a class="back back-link" href="../index.html#projects">
+                    ← Back to Projects
+                </a>
+
+                <span class="case-eyebrow">
+                    PHYSICS-INFORMED FORECASTING OF THE LORENZ SYSTEM
+                </span>
+
+            </div>
+
+
+            <h1>
+                Chaotic System Forecasting
+            </h1>
+
+
+            <p class="lead case-lead">
+                A scientific machine-learning project exploring long-horizon
+                forecasting in chaotic dynamics using Echo State Networks,
+                physics-informed reservoir computing, and systematic optimization.
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    Time Series
+                </span>
+
+                <span class="tag">
+                    Reservoir Computing
+                </span>
+
+                <span class="tag">
+                    Physics-Informed ML
+                </span>
+
+                <span class="tag">
+                    Optimization
+                </span>
+
+            </div>
+
+
+            <!-- Research Cover -->
+
+            <div class="case-visual chaos-hero-visual">
+                <img
+                    src="../assets/lorenz_phase_space_portfolio.png"
+                    alt="Lorenz system phase-space projections in the X-Y, X-Z, and Y-Z planes"
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Case Study Content
+    ========================== -->
+
+    <section class="section chaos-case-content">
+
+        <div class="container case-layout">
+
+
+            <div>
+
+
+                <!-- =========================
+                     Problem
+                ========================== -->
+
+                <section class="case-section">
+
+                    <h2>
+                        The Problem
+                    </h2>
+
+                    <p class="muted">
+                        Chaotic systems are inherently difficult to forecast because
+                        even very small differences in initial conditions can cause
+                        trajectories to diverge rapidly over time. The challenge was
+                        to investigate whether reservoir computing, physics-informed
+                        constraints, and systematic experimentation could extend the
+                        useful forecasting horizon of the Lorenz system.
+                    </p>
+
+                </section>
+
+
+
+                <!-- =========================
+                     Approach
+                ========================== -->
+
+                <section class="case-section">
+
+                    <h2>
+                        The Approach
+                    </h2>
+
+                    <p class="muted approach-intro">
+                        The project combines dynamical-system simulation,
+                        reservoir computing, physical constraints, and
+                        optimization within one forecasting workflow.
+                    </p>
+
+
+                    <div class="workflow-grid">
+
+
+                        <article class="workflow-step">
+
+                            <span class="workflow-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Simulate
+                            </h3>
+
+                            <p>
+                                Generate Lorenz-system trajectories and prepare
+                                time-series data for forecasting experiments,
+                                evaluation, and controlled comparison.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="workflow-step">
+
+                            <span class="workflow-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Model
+                            </h3>
+
+                            <p>
+                                Use conventional Echo State Networks as a
+                                data-driven baseline and Physics-Informed ESNs
+                                to incorporate the governing dynamics.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="workflow-step">
+
+                            <span class="workflow-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Optimize
+                            </h3>
+
+                            <p>
+                                Explore initial-condition behavior and optimize
+                                important reservoir hyperparameters using Optuna
+                                to improve long-horizon forecasting performance.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="workflow-step">
+
+                            <span class="workflow-number">
+                                04
+                            </span>
+
+                            <h3>
+                                Evaluate
+                            </h3>
+
+                            <p>
+                                Measure forecast quality in Lyapunov-time units
+                                and analyze when predicted trajectories begin to
+                                diverge from the true chaotic dynamics.
+                            </p>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     Technical Decisions
+                ========================== -->
+
+                <section class="case-section">
+
+                    <h2>
+                        Technical Decisions
+                    </h2>
+
+                    <p class="muted decisions-intro">
+                        The experimental design emphasizes meaningful evaluation,
+                        reproducibility, and a clear distinction between referenced
+                        baselines and newly achieved results.
+                    </p>
+
+
+                    <div class="decision-grid">
+
+
+                        <article class="decision-card">
+
+                            <span class="decision-label">
+                                EVALUATION
+                            </span>
+
+                            <h3>
+                                Lyapunov-Time Scale
+                            </h3>
+
+                            <p>
+                                Forecasting performance is evaluated using
+                                Lyapunov time rather than only raw simulation time,
+                                making the prediction horizon meaningful for a
+                                chaotic dynamical system.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="decision-card">
+
+                            <span class="decision-label">
+                                COMPARISON
+                            </span>
+
+                            <h3>
+                                Baseline Separation
+                            </h3>
+
+                            <p>
+                                Paper-reported ESN and PI-ESN baselines are kept
+                                explicitly separate from the achieved experimental
+                                forecasting horizon.
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="decision-card">
+
+                            <span class="decision-label">
+                                VALIDATION
+                            </span>
+
+                            <h3>
+                                Forecasting Diagnostics
+                            </h3>
+
+                            <p>
+                                Evaluation focuses on trajectory behavior,
+                                prediction error, and predictability horizon
+                                rather than relying on a single black-box score.
+                            </p>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     Results
+                ========================== -->
+
+                <section class="case-section">
+
+                    <h2>
+                        Results
+                    </h2>
+
+
+                    <div class="result-highlight">
+
+                        <div class="result-copy">
+
+                            <span class="result-label">
+                                LONG-HORIZON CHAOTIC FORECASTING
+                            </span>
+
+                            <h3>
+                                Experimental forecasting horizon extended to
+                                6 Lyapunov Times
+                            </h3>
+
+                            <p>
+                                Referenced results reported approximately
+                                4.5 Lyapunov Times for a conventional ESN and
+                                5.5 Lyapunov Times for a Physics-Informed ESN.
+                                Through initial-condition experimentation and
+                                hyperparameter optimization, the developed
+                                experimental approach reached a forecasting
+                                horizon of 6.0 Lyapunov Times.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     Why It Matters
+                ========================== -->
+
+                <section class="case-section">
+
+                    <h2>
+                        Why It Matters
+                    </h2>
+
+                    <p class="muted why-text">
+                        This work demonstrates how physics-informed constraints,
+                        reservoir computing, and systematic experimentation can
+                        be combined to extend useful forecasting horizons in highly
+                        sensitive nonlinear dynamical systems. The project also
+                        highlights the importance of evaluating chaotic forecasts
+                        using system-aware metrics rather than conventional
+                        prediction scores alone.
+                    </p>
+
+                </section>
+
+
+
+                <!-- =========================
+                     Experimental Evidence
+                ========================== -->
+
+                <section class="case-section chaos-evidence-section">
+
+                    <h2>
+                        Experimental Evidence
+                    </h2>
+
+                    <p class="muted chaos-evidence-intro">
+                        Experimental results comparing trajectory forecasts and normalized prediction error across Lyapunov time, with the predictability threshold used to determine the useful forecasting horizon.                    
+                    </p>
+                    
+                    <div class="chaos-evidence-grid">
+
+                        <!-- Prediction Comparison -->
+
+                        <figure class="chaos-evidence-card">
+
+                            <div class="chaos-evidence-image">
+                                <img
+                                    src="../assets/Chaotic_Prediction.png"
+                                    alt="Comparison of true Lorenz dynamics with conventional ESN and optimized physics-informed ESN predictions"
+                                >
+                            </div>
+
+                            <figcaption>
+
+                                <span class="chaos-evidence-label">
+                                    FORECAST TRAJECTORY
+                                </span>
+
+                                <h3>
+                                    True Dynamics vs Forecasted Trajectories
+                                </h3>
+
+                                <p>
+                                    Comparison of the true Lorenz-system dynamics with the conventional ESN and the optimized PI-ESN across the forecasting horizon.
+                                </p>
+
+                            </figcaption>
+
+                        </figure>
+
+
+                        <!-- Prediction Error -->
+
+                        <figure class="chaos-evidence-card">
+
+                            <div class="chaos-evidence-image">
+                                <img
+                                    src="../assets/chaotic_error.png"
+                                    alt="Normalized prediction error across Lyapunov time for chaotic system forecasting"
+                                >
+                            </div>
+
+                            <figcaption>
+
+                                <span class="chaos-evidence-label">
+                                    PREDICTION ERROR
+                                </span>
+
+                                <h3>
+                                    Forecast Error Across Lyapunov Time
+                                </h3>
+
+                                <p>
+                                    Normalized prediction error for the conventional ESN and optimized PI-ESN, evaluated against the predictability threshold to determine the useful forecasting horizon.
+                                </p>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 Sidebar
+            ========================== -->
+
+            <aside class="sidebar">
+
+
+                <div class="metric">
+
+                    <strong>
+                        6 Lyapunov Times
+                    </strong>
+
+                    <span>
+                        Achieved experimental forecasting horizon
+                    </span>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <span class="eyebrow">
+                        Forecasting Comparison
+                    </span>
+
+                    <div class="forecast-comparison">
+
+                        <p class="muted">
+                            <strong>4.5 LT</strong><br>
+                            Referenced ESN baseline
+                        </p>
+
+                        <p class="muted">
+                            <strong>5.5 LT</strong><br>
+                            Referenced PI-ESN baseline
+                        </p>
+
+                        <p class="muted">
+                            <strong>6.0 LT</strong><br>
+                            Achieved experimental horizon
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <span class="eyebrow">
+                        Technology Stack
+                    </span>
+
+                    <div class="chips">
+
+                        <span class="chip">
+                            Python
+                        </span>
+
+                        <span class="chip">
+                            PyTorch
+                        </span>
+
+                        <span class="chip">
+                            Reservoir Computing
+                        </span>
+
+                        <span class="chip">
+                            ESN
+                        </span>
+
+                        <span class="chip">
+                            PI-ESN
+                        </span>
+
+                        <span class="chip">
+                            Optuna
+                        </span>
+
+                        <span class="chip">
+                            Scientific ML
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="section case-cta-section">
+
+        <div class="container">
+
+            <div class="cta">
+
+
+                <div class="cta-copy">
+
+                    <h2>
+                        Need a Similar Solution?
+                    </h2>
+
+                    <p class="muted">
+                        If your project involves forecasting, scientific machine
+                        learning, dynamical systems, optimization, or advanced
+                        predictive modeling, let’s discuss the problem and the
+                        right technical approach.
+                    </p>
+
+                </div>
+
+
+                <a
+                    class="btn btn-primary"
+                    href="https://golance.com/freelancer/salma.elgezawy"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Discuss Your Project ↗
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <strong>
+                Salma Elgezawy — AI/ML Engineer
+            </strong>
+
+            <br>
+
+            Available for Remote Projects Worldwide
+
+        </div>
+
+
+        <div>
+            © Salma Elgezawy
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../assets/site.js"></script>
+
+</body>
+
+</html>

@@ -1,24 +1,590 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI-Powered Predictive Maintenance for Industrial Motors | Salma Elgezawy</title>
-<meta name="description" content="A rotating-machinery fault-classification project using vibration signals, engineered spectral features, deep learning, and physics-informed modeling ideas.">
-<meta property="og:title" content="AI-Powered Predictive Maintenance for Industrial Motors | Salma Elgezawy">
-<meta property="og:description" content="A rotating-machinery fault-classification project using vibration signals, engineered spectral features, deep learning, and physics-informed modeling ideas.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#071013">
-<link rel="stylesheet" href="../assets/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        AI-Powered Predictive Maintenance for Industrial Motors | Salma Elgezawy
+    </title>
+
+    <meta
+        name="description"
+        content="A rotating-machinery fault-classification project combining vibration-signal analysis, engineered spectral features, deep learning, and physics-informed constraints."
+    >
+
+    <meta
+        property="og:title"
+        content="AI-Powered Predictive Maintenance for Industrial Motors | Salma Elgezawy"
+    >
+
+    <meta
+        property="og:description"
+        content="A rotating-machinery fault-classification project combining vibration-signal analysis, engineered spectral features, deep learning, and physics-informed constraints."
+    >
+
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#071013">
+
+    <link rel="stylesheet" href="../assets/style.css">
+
 </head>
+
+
 <body>
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="../index.html#home">Salma Elgezawy</a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu</button>
-<div class="nav-links">
-<a href="../index.html#home">Home</a><a href="../index.html#services">Services</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#achievements">Achievements</a><a href="../index.html#about">About</a>
-</div></div></nav><main><section class="case-head"><div class="container"><a class="back" href="../index.html#projects">← Back to Projects</a><span class="eyebrow">Signal Processing + Physics-Informed Fault Classification</span><h1>AI-Powered Predictive Maintenance for Industrial Motors</h1><p class="lead">A rotating-machinery fault-classification project using vibration signals, engineered spectral features, deep learning, and physics-informed modeling ideas.</p><div class="tags"><span class="tag">Predictive Maintenance</span><span class="tag">Signal Processing</span><span class="tag">Physics-Informed ML</span><span class="tag">Fault Classification</span></div><div class="case-visual cover cover-machinery"></div></div></section>
-<section class="section" style="padding-top:30px"><div class="container case-layout"><div><section class="case-section"><h2>The Problem</h2><p class="muted">Industrial vibration data contains rich fault signatures, but those signatures can be difficult to separate without careful signal processing and modeling. This project explores a modeling pipeline that uses both learned and engineered representations.</p></section><section class="case-section"><h2>The Approach</h2><ul><li>Vibration-signal preprocessing and normalization.</li><li>FFT-based feature extraction and rotational harmonics.</li><li>Statistical features including RMS, kurtosis, skewness, and crest factor.</li><li>CNN-based representation learning combined with physics-informed ideas.</li><li>Evaluation across normal operation, imbalance, misalignment, and bearing-fault conditions.</li></ul></section><section class="case-section"><h2>Technical Decisions</h2><ul><li>Spectral and statistical features were used to preserve physically meaningful information.</li><li>The modeling pipeline combines data-driven learning with engineering knowledge instead of treating raw vibration as arbitrary input.</li><li>The MAFAULDA dataset provides a controlled benchmark for machinery-fault classification.</li></ul></section><section class="case-section"><h2>Results</h2><p class="muted">The project achieved 98% overall classification accuracy.</p></section><section class="case-section"><h2>Why It Matters</h2><p class="muted">The project demonstrates how vibration analysis and machine learning can support automated identification of mechanical fault conditions in rotating machinery.</p></section><section class="case-section"><h2>Visual Evidence</h2><p class="muted">Replace these placeholders with real screenshots, plots, hardware photos, or project videos.</p><div class="media-grid"><div class="media-ph">Signal / FFT Visualization</div><div class="media-ph">Feature Engineering Figure</div><div class="media-ph">Classification Results</div><div class="media-ph">Model Output Screenshot</div></div></section></div><aside class="sidebar"><div class="metric"><strong>98% Overall Classification Accuracy</strong><span>MAFAULDA fault classification</span></div><div class="card"><span class="eyebrow">Technology Stack</span><div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Scikit-learn</span><span class="chip">SciPy</span><span class="chip">Signal Processing</span></div></div><div style="margin-top:14px"><a class="btn btn-secondary" href="https://github.com/SalmaElgezawy/AI-Powered-Predictive-Maintenance-for-Industrial-Motors" target="_blank" rel="noopener">View on GitHub ↗</a></div></aside></div></section>
-<section class="section"><div class="container"><div class="cta"><div><h2>Need a Similar Solution?</h2><p class="muted">If your project involves data, machine learning, forecasting, computer vision, NLP, or intelligent engineering systems, let’s discuss the problem and the right technical approach.</p></div><a class="btn btn-primary" href="https://golance.com/freelancer/salma.elgezawy" target="_blank" rel="noopener">Discuss Your Project ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div><strong>Salma Elgezawy — AI/ML Engineer</strong><br>Available for Remote Projects Worldwide</div><div>© Salma Elgezawy</div></div></footer>
-<script src="../assets/site.js"></script></body></html>
+
+
+<!-- =========================
+     Navigation
+========================= -->
+
+<nav class="nav">
+
+    <div class="container nav-inner">
+
+        <a class="brand" href="../index.html#home">
+            Salma Elgezawy
+        </a>
+
+        <button class="menu-btn" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+        <div class="nav-links">
+
+            <a href="../index.html#home">
+                Home
+            </a>
+
+            <a href="../index.html#services">
+                Services
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#skills">
+                Skills
+            </a>
+
+            <a href="../index.html#achievements">
+                Achievements
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+
+<!-- =========================
+     Case Study Header
+========================= -->
+
+<section class="case-head predictive-case-head">
+
+    <div class="container">
+
+
+        <div class="predictive-header-meta">
+
+            <a class="back" href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+            <span class="case-eyebrow">
+                SIGNAL PROCESSING + PHYSICS-INFORMED FAULT CLASSIFICATION
+            </span>
+
+        </div>
+
+
+        <h1>
+            AI-Powered Predictive Maintenance for Industrial Motors
+        </h1>
+
+
+        <p class="lead case-lead">
+            A rotating-machinery fault-classification project combining
+            vibration-signal analysis, engineered spectral features,
+            deep learning, and physics-informed constraints.
+        </p>
+
+
+        <div class="tags">
+
+            <span class="tag">
+                Predictive Maintenance
+            </span>
+
+            <span class="tag">
+                Signal Processing
+            </span>
+
+            <span class="tag">
+                Physics-Informed ML
+            </span>
+
+            <span class="tag">
+                Fault Classification
+            </span>
+
+        </div>
+
+
+        <!-- Main Project Visual -->
+
+        <div class="case-visual cover predictive-cover">
+
+            <img
+                src="../assets/predictive_model.png"
+                alt="AI-powered predictive maintenance for industrial motors"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     Case Study Content
+========================= -->
+
+<section class="section predictive-case-content">
+
+    <div class="container case-layout">
+
+
+        <!-- Main Content -->
+
+        <div>
+
+
+            <!-- =========================
+                 Problem
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Problem
+                </h2>
+
+                <p class="muted">
+                    Industrial vibration data contains rich fault signatures,
+                    but those signatures can be difficult to separate without
+                    careful signal processing and modeling. The challenge was
+                    to build a fault-classification pipeline that combines
+                    vibration-signal analysis, physically meaningful features,
+                    and data-driven learning to distinguish multiple
+                    rotating-machinery fault conditions.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Approach
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Approach
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Vibration-signal preprocessing and normalization.
+                    </li>
+
+                    <li>
+                        FFT-based feature extraction and rotational harmonics.
+                    </li>
+
+                    <li>
+                        Statistical features including RMS, kurtosis,
+                        skewness, and crest factor.
+                    </li>
+
+                    <li>
+                        CNN-based representation learning integrated with
+                        physics-informed constraints in a hybrid diagnosis model.
+                    </li>
+
+                    <li>
+                        Evaluation across normal operation, imbalance,
+                        misalignment, and bearing-fault conditions.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Technical Decisions
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    Technical Decisions
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Spectral and statistical features were used to preserve
+                        physically meaningful information from vibration signals.
+                    </li>
+
+                    <li>
+                        The modeling pipeline combines data-driven learning with
+                        engineering knowledge instead of treating raw vibration
+                        measurements as arbitrary input.
+                    </li>
+
+                    <li>
+                        Physics-informed constraints were incorporated into the
+                        hybrid diagnosis framework alongside classification
+                        and data-matching objectives.
+                    </li>
+
+                    <li>
+                        The MAFAULDA dataset provides a controlled benchmark
+                        for rotating-machinery fault classification.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Results
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    Results
+                </h2>
+
+                <p class="muted">
+                    The final classification pipeline achieved
+                    <strong>98% overall accuracy</strong> on the MAFAULDA
+                    rotating-machinery fault dataset, demonstrating strong
+                    separation across the evaluated operating and fault conditions.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Why It Matters
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    Why It Matters
+                </h2>
+
+                <p class="muted">
+                    The project demonstrates how signal processing,
+                    domain-informed feature engineering, deep learning,
+                    and physics-informed modeling can be combined to identify
+                    mechanical fault conditions from vibration data. This type
+                    of pipeline can form the diagnostic layer of broader
+                    condition-monitoring and predictive-maintenance systems.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Experimental Evidence
+            ========================= -->
+
+            <section class="case-section predictive-evidence">
+
+                <h2>
+                    Experimental Evidence
+                </h2>
+
+                <p class="muted evidence-intro">
+                    Experimental results showing fault-classification
+                    performance and the training behavior of the hybrid
+                    physics-informed diagnosis model.
+                </p>
+
+
+                <!-- Confusion Matrix -->
+
+                <figure class="predictive-evidence-card">
+
+                    <img
+                        src="../assets/predictive_confusion_matrix_png.png"
+                        alt="Confusion matrix for the Hybrid PINN fault diagnosis model"
+                    >
+
+                    <figcaption>
+
+                        <span class="evidence-label">
+                            CLASSIFICATION PERFORMANCE
+                        </span>
+
+                        <h3>
+                            Fault Classification Performance
+                        </h3>
+
+                        <p>
+                            Confusion matrix of the Hybrid PINN diagnosis model
+                            across six rotating-machinery operating and fault
+                            conditions.
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- Training Diagnostics -->
+
+                <figure class="predictive-evidence-card">
+
+                    <img
+                        src="../assets/predictive_loss.png"
+                        alt="Training loss and diagnosis accuracy of the Hybrid PINN model"
+                    >
+
+                    <figcaption>
+
+                        <span class="evidence-label">
+                            TRAINING DIAGNOSTICS
+                        </span>
+
+                        <h3>
+                            Hybrid Model Training Behavior
+                        </h3>
+
+                        <p>
+                            Training diagnostics showing the evolution of the
+                            combined hybrid loss, diagnosis accuracy, and
+                            individual classification, physics, and
+                            data-matching loss components.
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             Sidebar
+        ========================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Main Metric -->
+
+            <div class="metric predictive-metric">
+
+                <strong>
+                    98%
+                </strong>
+
+                <span class="predictive-metric-title">
+                    Overall Classification Accuracy
+                </span>
+
+                <span class="predictive-metric-sub">
+                    MAFAULDA fault classification
+                </span>
+
+            </div>
+
+
+
+            <!-- Technology Stack -->
+
+            <div class="card">
+
+                <span class="eyebrow">
+                    Technology Stack
+                </span>
+
+                <div class="chips">
+
+                    <span class="chip">
+                        Python
+                    </span>
+
+                    <span class="chip">
+                        PyTorch
+                    </span>
+
+                    <span class="chip">
+                        NumPy
+                    </span>
+
+                    <span class="chip">
+                        Pandas
+                    </span>
+
+                    <span class="chip">
+                        Scikit-learn
+                    </span>
+
+                    <span class="chip">
+                        SciPy
+                    </span>
+
+                    <span class="chip">
+                        Signal Processing
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GitHub -->
+
+            <div class="predictive-github">
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://github.com/SalmaElgezawy/AI-Powered-Predictive-Maintenance-for-Industrial-Motors"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View on GitHub ↗
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section case-cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+
+            <div class="cta-copy">
+
+                <h2>
+                    Need a Similar Solution?
+                </h2>
+
+                <p class="muted">
+                    If your project involves predictive maintenance,
+                    signal processing, fault classification, or
+                    physics-informed machine learning, let’s discuss
+                    the problem and the right technical approach.
+                </p>
+
+            </div>
+
+
+            <a
+                class="btn btn-primary"
+                href="https://golance.com/freelancer/salma.elgezawy"
+                target="_blank"
+                rel="noopener"
+            >
+                Discuss Your Project ↗
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <strong>
+                Salma Elgezawy — AI/ML Engineer
+            </strong>
+
+            <br>
+
+            Available for Remote Projects Worldwide
+
+        </div>
+
+        <div>
+            © Salma Elgezawy
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../assets/site.js"></script>
+
+
+</body>
+</html>

@@ -1,24 +1,605 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TwinSight | Salma Elgezawy</title>
-<meta name="description" content="An end-to-end predictive-maintenance concept combining sensing, signal processing, machine learning, remaining-useful-life estimation, and a Unity-based Digital Twin.">
-<meta property="og:title" content="TwinSight | Salma Elgezawy">
-<meta property="og:description" content="An end-to-end predictive-maintenance concept combining sensing, signal processing, machine learning, remaining-useful-life estimation, and a Unity-based Digital Twin.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#071013">
-<link rel="stylesheet" href="../assets/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TwinSight | Salma Elgezawy</title>
+
+    <meta
+        name="description"
+        content="An end-to-end predictive maintenance system combining sensing, signal processing, machine learning, remaining useful life estimation, and a Unity-based Digital Twin."
+    >
+
+    <meta property="og:title" content="TwinSight | Salma Elgezawy">
+
+    <meta
+        property="og:description"
+        content="An end-to-end predictive maintenance system combining sensing, signal processing, machine learning, remaining useful life estimation, and a Unity-based Digital Twin."
+    >
+
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#071013">
+
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
+
+
 <body>
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="../index.html#home">Salma Elgezawy</a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu</button>
-<div class="nav-links">
-<a href="../index.html#home">Home</a><a href="../index.html#services">Services</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#achievements">Achievements</a><a href="../index.html#about">About</a>
-</div></div></nav><main><section class="case-head"><div class="container"><a class="back" href="../index.html#projects">← Back to Projects</a><span class="eyebrow">AI, IoT & Digital Twin for Predictive Maintenance</span><h1>TwinSight</h1><p class="lead">An end-to-end predictive-maintenance concept combining sensing, signal processing, machine learning, remaining-useful-life estimation, and a Unity-based Digital Twin.</p><div class="tags"><span class="tag">Predictive Maintenance</span><span class="tag">Industrial AI</span><span class="tag">IoT</span><span class="tag">Digital Twin</span></div><div class="case-visual cover cover-industrial"></div></div></section>
-<section class="section" style="padding-top:30px"><div class="container case-layout"><div><section class="case-section"><h2>The Problem</h2><p class="muted">Industrial motors are critical assets, while reactive maintenance waits for faults to become costly and scheduled maintenance can replace components too early. TwinSight explores a more informed approach by combining live sensing, signal analysis, machine learning, remaining-useful-life estimation, and Digital Twin visualization.</p></section><section class="case-section"><h2>The Approach</h2><ul><li>Industrial sensor telemetry and condition monitoring around an induction motor.</li><li>Signal processing with FFT-based analysis, Welch spectral analysis, Hilbert envelope analysis, and overlapping windows.</li><li>Feature engineering using RMS, Crest Factor, ISO Velocity, harmonics, harmonic ratios, bearing-envelope features, electrical measurements, and thermal information.</li><li>HistGradientBoostingClassifier for four mechanical states: Nominal, Unbalance, Misalignment, and Combined.</li><li>Unity-based Digital Twin for live visualization, fault-state exploration, and what-if scenarios.</li><li>FastAPI, MQTT, REST APIs, and PostgreSQL/time-series data handling for system integration.</li></ul></section><section class="case-section"><h2>Technical Decisions</h2><ul><li>Grouped validation was used to reduce recording-level leakage.</li><li>RobustScaler was used for resilient feature scaling.</li><li>GridSearchCV supported structured hyperparameter tuning.</li><li>The project treats signal processing, modeling, and system integration as one connected engineering workflow.</li></ul></section><section class="case-section"><h2>Results</h2><p class="muted">The final mechanical-fault classifier achieved 90% Macro F1 across the four target classes.</p></section><section class="case-section"><h2>Why It Matters</h2><p class="muted">TwinSight demonstrates how sensor data, physical signals, machine learning, and interactive visualization can be combined into a practical predictive-maintenance workflow for industrial assets.</p></section><section class="case-section"><h2>Visual Evidence</h2><p class="muted">Replace these placeholders with real screenshots, plots, hardware photos, or project videos.</p><div class="media-grid"><div class="media-ph">Hardware Setup Photos</div><div class="media-ph">Unity Digital Twin Screenshots</div><div class="media-ph">Monitoring Dashboard Screenshots</div><div class="media-ph">Demo Video — Nominal</div><div class="media-ph">Demo Video — Unbalance</div><div class="media-ph">Demo Video — Misalignment</div><div class="media-ph">Demo Video — Combined Fault</div><div class="media-ph">What-If Scenario Demo</div></div></section></div><aside class="sidebar"><div class="metric"><strong>90% Macro F1 Score</strong><span>Mechanical Fault Classification</span></div><div class="card"><span class="eyebrow">Technology Stack</span><div class="chips"><span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">FFT / Signal Processing</span><span class="chip">FastAPI</span><span class="chip">MQTT</span><span class="chip">PostgreSQL</span><span class="chip">Unity</span></div></div></aside></div></section>
-<section class="section"><div class="container"><div class="cta"><div><h2>Need a Similar Solution?</h2><p class="muted">If your project involves data, machine learning, forecasting, computer vision, NLP, or intelligent engineering systems, let’s discuss the problem and the right technical approach.</p></div><a class="btn btn-primary" href="https://golance.com/freelancer/salma.elgezawy" target="_blank" rel="noopener">Discuss Your Project ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div><strong>Salma Elgezawy — AI/ML Engineer</strong><br>Available for Remote Projects Worldwide</div><div>© Salma Elgezawy</div></div></footer>
-<script src="../assets/site.js"></script></body></html>
+
+<!-- =========================
+     Navigation
+========================= -->
+
+<nav class="nav">
+    <div class="container nav-inner">
+
+        <a class="brand" href="../index.html#home">
+            Salma Elgezawy
+        </a>
+
+        <button class="menu-btn" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#achievements">Achievements</a>
+            <a href="../index.html#about">About</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<main>
+
+    <!-- =========================
+         Case Study Header
+    ========================== -->
+
+    <section class="case-head">
+        <div class="container">
+
+            <div class="case-header-meta">
+
+                <a class="back back-link" href="../index.html#projects">
+                    ← Back to Projects
+                </a>
+
+                <span class="case-eyebrow">
+                    AI, IOT & DIGITAL TWIN FOR PREDICTIVE MAINTENANCE
+                </span>
+
+            </div>
+
+
+            <h1>TwinSight</h1>
+
+
+            <p class="lead case-lead">
+                An end-to-end predictive maintenance system combining sensing,
+                signal processing, machine learning, remaining useful life estimation,
+                and a Unity-based Digital Twin.
+            </p>
+
+
+            <div class="tags">
+
+                <span class="tag">
+                    Predictive Maintenance
+                </span>
+
+                <span class="tag">
+                    Industrial AI
+                </span>
+
+                <span class="tag">
+                    IoT
+                </span>
+
+                <span class="tag">
+                    Digital Twin
+                </span>
+
+            </div>
+
+
+            <!-- Main Project Demo -->
+
+            <div class="case-media">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="../assets/videos/Final_Combo.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         Case Study Content
+    ========================== -->
+
+    <section class="section" style="padding-top:30px">
+
+        <div class="container case-layout">
+
+            <div>
+
+                <!-- Problem -->
+
+                <section class="case-section">
+
+                    <h2>The Problem</h2>
+
+                    <p class="muted">
+                        Industrial motors are critical assets, yet maintenance decisions are often
+                        reactive or based on fixed schedules. This can allow developing faults to go
+                        unnoticed until they become costly, while unnecessary scheduled maintenance
+                        can lead to premature component replacement. The challenge was to create a
+                        monitoring workflow that could turn real-time motor data into meaningful
+                        information about machine condition and support earlier, more informed
+                        maintenance decisions.
+                    </p>
+
+                </section>
+
+
+                <!-- Approach -->
+
+                <section class="case-section">
+
+                    <h2>The Approach</h2>
+
+                    <p class="muted approach-intro">
+                        TwinSight connects sensing, signal processing, machine learning,
+                        and Digital Twin visualization in one continuous predictive-maintenance workflow.
+                    </p>
+
+                    <div class="workflow-grid">
+
+                        <article class="workflow-step">
+                            <span class="workflow-number">01</span>
+
+                            <h3>Sense</h3>
+
+                            <p>
+                                Capture real-time motor condition data through industrial sensing,
+                                including vibration, electrical measurements, temperature,
+                                and other operating signals.
+                            </p>
+                        </article>
+
+
+                        <article class="workflow-step">
+                            <span class="workflow-number">02</span>
+
+                            <h3>Process</h3>
+
+                            <p>
+                                Transform raw signals using FFT, Welch spectral analysis,
+                                Hilbert envelope analysis, overlapping windows, and engineered
+                                condition-monitoring features.
+                            </p>
+                        </article>
+
+
+                        <article class="workflow-step">
+                            <span class="workflow-number">03</span>
+
+                            <h3>Predict</h3>
+
+                            <p>
+                                Use machine learning to classify motor condition across
+                                Nominal, Unbalance, Misalignment, and Combined fault states,
+                                while supporting remaining useful life estimation.
+                            </p>
+                        </article>
+
+
+                        <article class="workflow-step">
+                            <span class="workflow-number">04</span>
+
+                            <h3>Visualize</h3>
+
+                            <p>
+                                Present live machine condition, signal behavior, fault states,
+                                and what-if scenarios through a Unity-based Digital Twin
+                                connected to the monitoring system.
+                            </p>
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <!-- Technical Decisions -->
+
+                <section class="case-section">
+
+                    <h2>Technical Decisions</h2>
+
+                    <p class="muted decisions-intro">
+                        Several modeling and validation choices were made to build a more
+                        reliable machine-learning pipeline from real motor recordings.
+                    </p>
+
+                    <div class="decision-grid">
+
+                        <article class="decision-card">
+                            <span class="decision-label">VALIDATION</span>
+                            <h3>Grouped Validation</h3>
+                            <p>
+                                Grouped validation was used to reduce recording-level leakage
+                                and provide a more realistic estimate of model performance.
+                            </p>
+                        </article>
+
+
+                        <article class="decision-card">
+                            <span class="decision-label">PREPROCESSING</span>
+                            <h3>Robust Feature Scaling</h3>
+                            <p>
+                                RobustScaler was used to reduce sensitivity to extreme feature
+                                values while preserving the information needed for classification.
+                            </p>
+                        </article>
+
+
+                        <article class="decision-card">
+                            <span class="decision-label">OPTIMIZATION</span>
+                            <h3>Structured Model Tuning</h3>
+                            <p>
+                                GridSearchCV was used to systematically explore model
+                                configurations and select stronger hyperparameter settings.
+                            </p>
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Results -->
+
+                <section class="case-section">
+
+                    <h2>Results</h2>
+
+                    <div class="result-highlight">
+
+                        <div class="result-copy">
+
+                            <span class="result-label">
+                                MECHANICAL FAULT CLASSIFICATION
+                            </span>
+
+                            <h3>
+                                Reliable classification across four motor conditions
+                            </h3>
+
+                            <p>
+                                The final classifier distinguishes between Nominal,
+                                Unbalance, Misalignment, and Combined operating conditions,
+                                demonstrating the value of combining engineered signal
+                                features with machine learning for motor condition monitoring.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Why It Matters -->
+
+                <section class="case-section">
+
+                    <h2>Why It Matters</h2>
+
+                    <p class="muted why-text">
+                        TwinSight brings sensing, signal processing, machine learning,
+                        remaining useful life estimation, and Digital Twin visualization
+                        into one connected workflow. Rather than treating fault classification
+                        as an isolated model, the project demonstrates how AI can become part
+                        of a broader industrial monitoring system that turns physical machine
+                        signals into information that can support maintenance decisions.
+                    </p>
+
+                </section>
+
+
+                            </div>
+
+
+            <!-- =========================
+                 Sidebar
+            ========================== -->
+
+            <aside class="sidebar">
+
+                <div class="metric">
+
+                    <strong>
+                        90% Macro F1 Score
+                    </strong>
+
+                    <span>
+                        Mechanical Fault Classification
+                    </span>
+
+                </div>
+
+
+                <div class="card">
+
+                    <span class="eyebrow">
+                        Technology Stack
+                    </span>
+
+                    <div class="chips">
+
+                        <span class="chip">Python</span>
+
+                        <span class="chip">Scikit-learn</span>
+
+                        <span class="chip">
+                            FFT / Signal Processing
+                        </span>
+
+                        <span class="chip">FastAPI</span>
+
+                        <span class="chip">MQTT</span>
+
+                        <span class="chip">PostgreSQL</span>
+
+                        <span class="chip">Unity</span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         System Demonstrations
+    ========================== -->
+
+    <section class="section system-demos">
+
+        <div class="container">
+
+            <div class="system-demo-heading">
+
+                <span class="eyebrow">
+                    PROJECT IN ACTION
+                </span>
+
+                <h2>
+                    System Demonstrations
+                </h2>
+
+                <p class="muted">
+                    The system was demonstrated across different motor operating
+                    conditions, showing how the physical setup, monitoring interface,
+                    and Digital Twin respond to changes in machine condition.
+                </p>
+
+            </div>
+
+
+            <div class="demo-grid">
+
+
+                <!-- Nominal -->
+
+                <article class="demo-card">
+
+                    <video controls muted preload="metadata">
+
+                        <source
+                            src="../assets/videos/Final_Nominal.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video tag.
+
+                    </video>
+
+
+                    <div class="demo-info">
+
+                        <span class="demo-label">
+                            NORMAL OPERATION
+                        </span>
+
+                        <h3>
+                            Nominal Condition
+                        </h3>
+
+                        <p>
+                            Demonstration of the monitoring system during
+                            normal motor operation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Unbalance -->
+
+                <article class="demo-card">
+
+                    <video controls muted preload="metadata">
+
+                        <source
+                            src="../assets/videos/Final_Unbalance.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video tag.
+
+                    </video>
+
+
+                    <div class="demo-info">
+
+                        <span class="demo-label">
+                            FAULT CONDITION
+                        </span>
+
+                        <h3>
+                            Unbalance
+                        </h3>
+
+                        <p>
+                            Demonstration of system behavior under
+                            an unbalance condition.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Misalignment -->
+
+                <article class="demo-card">
+
+                    <video controls muted preload="metadata">
+
+                        <source
+                            src="../assets/videos/Final_Misalignment.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support the video tag.
+
+                    </video>
+
+
+                    <div class="demo-info">
+
+                        <span class="demo-label">
+                            FAULT CONDITION
+                        </span>
+
+                        <h3>
+                            Misalignment
+                        </h3>
+
+                        <p>
+                            Demonstration of system behavior under
+                            a misalignment condition.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+  
+    <!-- =========================
+     CTA
+========================== -->
+
+<section class="section case-cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <div class="cta-copy">
+
+                <h2>
+                    Need a Similar Solution?
+                </h2>
+
+                <p class="muted">
+                    If your project involves data, machine learning, forecasting,
+                    computer vision, NLP, or intelligent engineering systems,
+                    let’s discuss the problem and the right technical approach.
+                </p>
+
+            </div>
+
+            <a
+                class="btn btn-primary"
+                href="https://golance.com/freelancer/salma.elgezawy"
+                target="_blank"
+                rel="noopener"
+            >
+                Discuss Your Project ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+            <strong>
+                Salma Elgezawy — AI/ML Engineer
+            </strong>
+
+            <br>
+
+            Available for Remote Projects Worldwide
+        </div>
+
+        <div>
+            © Salma Elgezawy
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../assets/site.js"></script>
+
+</body>
+</html>

@@ -1,24 +1,500 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oil Spill Semantic Segmentation | Salma Elgezawy</title>
-<meta name="description" content="A multi-class semantic-segmentation project for aerial oil-spill imagery with class balancing, attention mechanisms, and a custom decoder.">
-<meta property="og:title" content="Oil Spill Semantic Segmentation | Salma Elgezawy">
-<meta property="og:description" content="A multi-class semantic-segmentation project for aerial oil-spill imagery with class balancing, attention mechanisms, and a custom decoder.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#071013">
-<link rel="stylesheet" href="../assets/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Oil Spill Semantic Segmentation | Salma Elgezawy
+    </title>
+
+    <meta
+        name="description"
+        content="A multi-class semantic-segmentation project for aerial oil-spill imagery using class balancing, attention mechanisms, and an encoder-decoder deep learning architecture."
+    >
+
+    <meta
+        property="og:title"
+        content="Oil Spill Semantic Segmentation | Salma Elgezawy"
+    >
+
+    <meta
+        property="og:description"
+        content="A multi-class semantic-segmentation project for aerial oil-spill imagery using class balancing, attention mechanisms, and an encoder-decoder deep learning architecture."
+    >
+
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#071013">
+
+    <link rel="stylesheet" href="../assets/style.css">
+
 </head>
+
+
 <body>
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="../index.html#home">Salma Elgezawy</a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu</button>
-<div class="nav-links">
-<a href="../index.html#home">Home</a><a href="../index.html#services">Services</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#achievements">Achievements</a><a href="../index.html#about">About</a>
-</div></div></nav><main><section class="case-head"><div class="container"><a class="back" href="../index.html#projects">← Back to Projects</a><span class="eyebrow">Pixel-Level Deep Learning for Aerial Imagery</span><h1>Oil Spill Semantic Segmentation</h1><p class="lead">A multi-class semantic-segmentation project for aerial oil-spill imagery with class balancing, attention mechanisms, and a custom decoder.</p><div class="tags"><span class="tag">Computer Vision</span><span class="tag">Semantic Segmentation</span><span class="tag">Deep Learning</span><span class="tag">Environmental AI</span></div><div class="case-visual cover cover-ocean"></div></div></section>
-<section class="section" style="padding-top:30px"><div class="container case-layout"><div><section class="case-section"><h2>The Problem</h2><p class="muted">Oil-spill monitoring from aerial imagery requires detailed pixel-level interpretation. The task is complicated by class imbalance, strong visual similarity between categories, and high variation within the same class.</p></section><section class="case-section"><h2>The Approach</h2><ul><li>Six-class semantic segmentation: Background, Emulsion, Oil, Oil Platform, Sheen, and Ship.</li><li>Image preprocessing and augmentation with geometric and photometric transforms.</li><li>Class-distribution analysis and class weighting / balancing strategies.</li><li>Pretrained ResNet50 encoder with a custom decoder, skip connections, progressive bilinear upsampling, and channel/spatial attention.</li><li>Weighted Cross-Entropy and Dice Loss with AdamW, learning-rate scheduling, and early stopping.</li></ul></section><section class="case-section"><h2>Technical Decisions</h2><ul><li>The pipeline explicitly addresses class imbalance rather than relying only on architecture changes.</li><li>Attention and skip connections help preserve spatial detail across encoder-decoder stages.</li><li>Qualitative segmentation evidence is more informative here than over-emphasizing a single score.</li></ul></section><section class="case-section"><h2>Results</h2><p class="muted">The project demonstrates a full semantic-segmentation workflow from dataset analysis through training and qualitative prediction review.</p></section><section class="case-section"><h2>Why It Matters</h2><p class="muted">It shows how deep learning can be applied to pixel-level environmental imagery where different surface phenomena may appear visually similar.</p></section><section class="case-section"><h2>Visual Evidence</h2><p class="muted">Replace these placeholders with real screenshots, plots, hardware photos, or project videos.</p><div class="media-grid"><div class="media-ph">Original Aerial Image</div><div class="media-ph">Ground-Truth Mask</div><div class="media-ph">Predicted Segmentation</div><div class="media-ph">Qualitative Comparison</div></div></section></div><aside class="sidebar"><div class="card" style="margin-top:14px"><strong>Team project</strong><p class="muted">This case study uses project-focused language and does not imply sole authorship of the repository.</p></div><div class="card"><span class="eyebrow">Technology Stack</span><div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">ResNet50</span><span class="chip">Albumentations</span><span class="chip">Semantic Segmentation</span><span class="chip">Attention</span><span class="chip">AdamW</span></div></div><div style="margin-top:14px"><a class="btn btn-secondary" href="https://github.com/sagdaesmat/oil-spill-semantic-segmentation" target="_blank" rel="noopener">View on GitHub ↗</a></div></aside></div></section>
-<section class="section"><div class="container"><div class="cta"><div><h2>Need a Similar Solution?</h2><p class="muted">If your project involves data, machine learning, forecasting, computer vision, NLP, or intelligent engineering systems, let’s discuss the problem and the right technical approach.</p></div><a class="btn btn-primary" href="https://golance.com/freelancer/salma.elgezawy" target="_blank" rel="noopener">Discuss Your Project ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div><strong>Salma Elgezawy — AI/ML Engineer</strong><br>Available for Remote Projects Worldwide</div><div>© Salma Elgezawy</div></div></footer>
-<script src="../assets/site.js"></script></body></html>
+
+
+<!-- =========================
+     Navigation
+========================= -->
+
+<nav class="nav">
+
+    <div class="container nav-inner">
+
+        <a class="brand" href="../index.html#home">
+            Salma Elgezawy
+        </a>
+
+        <button class="menu-btn" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+        <div class="nav-links">
+
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#achievements">Achievements</a>
+            <a href="../index.html#about">About</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+
+<!-- =========================
+     Case Study Header
+========================= -->
+
+<section class="case-head oil-case-head">
+
+    <div class="container">
+
+
+        <div class="oil-header-meta">
+
+            <a class="back" href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+            <span class="case-eyebrow">
+                PIXEL-LEVEL DEEP LEARNING FOR AERIAL IMAGERY
+            </span>
+
+        </div>
+
+
+        <h1>
+            Oil Spill Semantic Segmentation
+        </h1>
+
+
+        <p class="lead case-lead">
+            A multi-class semantic-segmentation project for aerial oil-spill
+            imagery using class balancing, attention mechanisms, and a custom
+            encoder-decoder architecture.
+        </p>
+
+
+        <div class="tags">
+
+            <span class="tag">
+                Computer Vision
+            </span>
+
+            <span class="tag">
+                Semantic Segmentation
+            </span>
+
+            <span class="tag">
+                Deep Learning
+            </span>
+
+            <span class="tag">
+                Environmental AI
+            </span>
+
+        </div>
+
+
+        <!-- Main Project Visual -->
+
+        <div class="case-visual cover oil-cover">
+
+            <img
+                src="../assets/Oil_Spill.png"
+                alt="Oil spill semantic segmentation project cover"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     Case Study Content
+========================= -->
+
+<section class="section oil-case-content">
+
+    <div class="container case-layout">
+
+
+        <!-- Main Content -->
+
+        <div>
+
+
+            <!-- Problem -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Problem
+                </h2>
+
+                <p class="muted">
+                    Oil-spill monitoring from aerial imagery requires detailed
+                    pixel-level interpretation rather than simple image-level
+                    classification. The challenge is increased by severe class
+                    imbalance, visual similarity between surface phenomena, and
+                    large appearance variations within the same semantic class.
+                </p>
+
+            </section>
+
+
+
+            <!-- Approach -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Approach
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Six-class semantic segmentation covering Background,
+                        Emulsion, Oil, Oil Platform, Sheen, and Ship.
+                    </li>
+
+                    <li>
+                        Image preprocessing and augmentation using geometric
+                        and photometric transformations.
+                    </li>
+
+                    <li>
+                        Class-distribution analysis and weighting strategies
+                        to reduce the effect of class imbalance.
+                    </li>
+
+                    <li>
+                        A pretrained ResNet50 encoder combined with a custom
+                        decoder, skip connections, progressive bilinear
+                        upsampling, and channel/spatial attention.
+                    </li>
+
+                    <li>
+                        Training with weighted Cross-Entropy and Dice Loss,
+                        AdamW optimization, learning-rate scheduling,
+                        and early stopping.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- Technical Decisions -->
+
+            <section class="case-section">
+
+                <h2>
+                    Technical Decisions
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Class imbalance was addressed explicitly through
+                        distribution analysis and weighted learning rather
+                        than relying on architecture changes alone.
+                    </li>
+
+                    <li>
+                        Skip connections were used to recover spatial detail
+                        that can be lost during encoder downsampling.
+                    </li>
+
+                    <li>
+                        Channel and spatial attention were introduced to help
+                        the model emphasize relevant visual features and
+                        regions within aerial imagery.
+                    </li>
+
+                    <li>
+                        Qualitative mask inspection was treated as an important
+                        part of evaluation because segmentation quality depends
+                        on spatial structure, not only a single aggregate score.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- Results -->
+
+            <section class="case-section">
+
+                <h2>
+                    Results
+                </h2>
+
+                <p class="muted">
+                    The project produced a complete multi-class semantic-
+                    segmentation pipeline covering dataset analysis,
+                    preprocessing, model development, training, and qualitative
+                    review of predicted segmentation masks.
+                </p>
+
+            </section>
+
+
+
+            <!-- Why It Matters -->
+
+            <section class="case-section">
+
+                <h2>
+                    Why It Matters
+                </h2>
+
+                <p class="muted">
+                    The project demonstrates how deep learning can be applied
+                    to complex environmental imagery where multiple surface
+                    phenomena may appear visually similar. Pixel-level
+                    segmentation can provide more detailed spatial information
+                    than image-level classification for environmental
+                    monitoring workflows.
+                </p>
+
+            </section>
+
+
+
+            <section class="oil-demo-section">
+                <div class="section-heading">
+                    <span class="eyebrow">MODEL IN ACTION</span>
+                    <h2>Oil Spill Segmentation Demo</h2>
+                    <p>
+                    A working demonstration of the segmentation pipeline, from aerial-image
+                    input to pixel-level prediction across six semantic classes.
+                    </p>
+                </div>
+
+                <div class="oil-demo-video">
+                    <video controls preload="metadata">
+                    <source src="../assets/videos/Oill Spill.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             Sidebar
+        ========================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Project Scope -->
+
+            <div class="metric oil-metric">
+
+                <strong>
+                    6
+                </strong>
+
+                <span class="oil-metric-title">
+                    Semantic Classes
+                </span>
+
+                <span class="oil-metric-sub">
+                    Multi-class aerial segmentation
+                </span>
+
+            </div>
+
+
+
+            <!-- Project Context -->
+
+            <div class="card">
+
+                <span class="eyebrow">
+                    Project Context
+                </span>
+
+                <p class="muted oil-context">
+                    Collaborative computer-vision project focused on
+                    multi-class semantic segmentation of aerial oil-spill imagery.
+                </p>
+
+            </div>
+
+
+
+            <!-- Technology Stack -->
+
+            <div class="card">
+
+                <span class="eyebrow">
+                    Technology Stack
+                </span>
+
+                <div class="chips">
+
+                    <span class="chip">Python</span>
+                    <span class="chip">PyTorch</span>
+                    <span class="chip">ResNet50</span>
+                    <span class="chip">Albumentations</span>
+                    <span class="chip">Semantic Segmentation</span>
+                    <span class="chip">Attention</span>
+                    <span class="chip">AdamW</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GitHub -->
+
+            <div class="oil-github">
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://github.com/sagdaesmat/oil-spill-semantic-segmentation"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View on GitHub ↗
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section case-cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+
+            <div class="cta-copy">
+
+                <h2>
+                    Need a Similar Solution?
+                </h2>
+
+                <p class="muted">
+                    If your project involves semantic segmentation,
+                    computer vision, aerial imagery, or deep-learning-based
+                    image analysis, let’s discuss the problem and the right
+                    technical approach.
+                </p>
+
+            </div>
+
+
+            <a
+                class="btn btn-primary"
+                href="https://golance.com/freelancer/salma.elgezawy"
+                target="_blank"
+                rel="noopener"
+            >
+                Discuss Your Project ↗
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <strong>
+                Salma Elgezawy — AI/ML Engineer
+            </strong>
+
+            <br>
+
+            Available for Remote Projects Worldwide
+
+        </div>
+
+        <div>
+            © Salma Elgezawy
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../assets/site.js"></script>
+
+
+</body>
+</html>

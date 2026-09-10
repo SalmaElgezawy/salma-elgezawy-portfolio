@@ -1029,12 +1029,48 @@ h1{
   gap:20px;
 }
 
+.case-cta-section{
+    padding-top:30px;
+    padding-bottom:60px;
+}
+
+.case-cta-section .btn{
+    width:auto;
+}
+
 .cta h2{
   margin:0 0 8px;
 
   font-size:2rem;
 }
 
+/* =========================================================
+   CASE STUDY CTA
+========================================================= */
+
+.case-cta-section{
+    padding-top:35px;
+    padding-bottom:70px;
+}
+
+.case-cta-section .cta{
+    margin-top:0;
+}
+
+.case-cta-section .cta-copy{
+    min-width:0;
+    flex:1;
+}
+
+.case-cta-section .cta-copy p{
+    max-width:850px;
+    margin-bottom:0;
+}
+
+.case-cta-section .btn{
+    white-space:nowrap;
+    flex-shrink:0;
+}
 
 /* =========================================================
    FOOTER
@@ -1119,7 +1155,7 @@ h1{
       #091519
     );
 
-  margin-bottom:18px;
+  margin-bottom:0;
 }
 
 .metric strong{
@@ -1444,6 +1480,20 @@ h1{
   .project-card.featured .cover{
     aspect-ratio:16 / 9;
   }
+
+  .case-cta-section{
+    padding-top:25px;
+    padding-bottom:55px;
+  }
+
+  .case-cta-section .cta{
+      padding:28px 24px;
+  }
+
+  .case-cta-section .btn{
+      width:100%;
+      white-space:normal;
+  }
 }
 
 
@@ -1462,4 +1512,2281 @@ h1{
 #approach{
   padding-top:80px;
   padding-bottom:70px;
+}
+
+/* =========================================
+   TwinSight Case Study
+========================================= */
+
+
+/* Back link + project category */
+
+.case-header-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:34px;
+}
+
+
+/* Project introduction */
+
+.case-lead{
+    width:100%;
+    max-width:1050px;
+    font-size:20px;
+    line-height:1.65;
+}
+
+
+/* Main demo */
+
+.case-media{
+    width:100%;
+    margin-top:36px;
+    border:1px solid var(--line);
+    border-radius:28px;
+    overflow:hidden;
+    background:#000;
+}
+
+.case-media video{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+}
+
+
+/* Mobile */
+
+@media (max-width:900px){
+
+    .case-lead{
+        max-width:100%;
+        font-size:18px;
+    }
+
+    .case-media{
+        border-radius:20px;
+    }
+
+}
+
+/* =========================================
+   TwinSight Workflow
+========================================= */
+
+.approach-intro{
+    max-width:880px;
+    margin-bottom:28px;
+}
+
+
+/* Workflow container */
+
+.workflow-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:18px;
+}
+
+
+/* Individual step */
+
+.workflow-step{
+    position:relative;
+
+    padding:28px;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.045),
+            rgba(17,31,39,.72)
+        );
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+
+.workflow-step:hover{
+    transform:translateY(-4px);
+
+    border-color:rgba(105,209,206,.36);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.08),
+            rgba(17,31,39,.9)
+        );
+}
+
+
+/* Step number */
+
+.workflow-number{
+    display:block;
+
+    margin-bottom:18px;
+
+    color:var(--accent);
+
+    font-size:13px;
+    font-weight:800;
+
+    letter-spacing:.14em;
+}
+
+
+/* Step title */
+
+.workflow-step h3{
+    margin:0 0 10px;
+
+    color:var(--text);
+
+    font-size:24px;
+    line-height:1.2;
+}
+
+
+/* Step description */
+
+.workflow-step p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:15.5px;
+    line-height:1.75;
+}
+
+
+/* Mobile */
+
+@media (max-width:700px){
+
+    .workflow-grid{
+        grid-template-columns:1fr;
+    }
+
+    .workflow-step{
+        padding:24px;
+    }
+
+}
+
+/* =========================================
+   Technical Decisions
+========================================= */
+
+.decisions-intro{
+    max-width:850px;
+    margin-bottom:26px;
+}
+
+.decision-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:16px;
+}
+
+.decision-card{
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.04),
+            rgba(17,31,39,.7)
+        );
+}
+
+.decision-label,
+.result-label{
+    display:block;
+    margin-bottom:14px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.13em;
+}
+
+.decision-card h3{
+    margin:0 0 10px;
+
+    color:var(--text);
+    font-size:18px;
+    line-height:1.3;
+}
+
+.decision-card p{
+    margin:0;
+
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   Results
+========================================= */
+
+.result-highlight{
+    padding:28px;
+
+    border:1px solid rgba(105,209,206,.24);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(105,209,206,.07),
+            rgba(17,31,39,.55)
+        );
+}
+
+.result-copy h3{
+    max-width:700px;
+    margin:0 0 12px;
+
+    color:var(--text);
+    font-size:22px;
+    line-height:1.35;
+}
+
+.result-copy p{
+    max-width:800px;
+    margin:0;
+
+    color:var(--muted);
+    line-height:1.75;
+}
+
+
+/* =========================================
+   Why It Matters
+========================================= */
+
+.why-text{
+    max-width:900px;
+    line-height:1.8;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width:900px){
+
+    .decision-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================================
+   TwinSight System Demonstrations
+========================================= */
+
+.system-demos{
+    padding-top:70px;
+    padding-bottom:50px;
+}
+
+.system-demo-heading{
+    margin-bottom:30px;
+}
+
+.system-demo-heading .eyebrow{
+    display:block;
+    margin-bottom:10px;
+}
+
+.system-demo-heading h2{
+    margin:0 0 12px;
+
+    color:var(--text);
+
+    font-size:32px;
+    line-height:1.2;
+}
+
+.system-demo-heading p{
+    max-width:900px;
+    margin:0;
+}
+
+
+/* Three equal demonstration cards */
+
+.demo-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:20px;
+}
+
+
+/* Card */
+
+.demo-card{
+    min-width:0;
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:var(--panel);
+}
+
+
+/* Video */
+
+.demo-card video{
+    width:100%;
+    aspect-ratio:16 / 9;
+
+    display:block;
+
+    background:#000;
+
+    object-fit:contain;
+}
+
+
+/* Card content */
+
+.demo-info{
+    padding:20px 22px 22px;
+}
+
+.demo-label{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.13em;
+}
+
+.demo-info h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-size:20px;
+    line-height:1.3;
+}
+
+.demo-info p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* Tablet */
+
+@media (max-width:900px){
+
+    .demo-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:650px){
+
+    .demo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .system-demos{
+        padding-top:55px;
+        padding-bottom:60px;
+    }
+
+}
+
+/* =========================================================
+   CASE STUDY CTA
+========================================================= */
+
+.case-cta-section{
+    padding-top:35px;
+    padding-bottom:70px;
+}
+
+.case-cta-section .cta{
+    margin-top:0;
+}
+
+.case-cta-section .cta-copy{
+    min-width:0;
+    flex:1;
+}
+
+.case-cta-section .cta-copy p{
+    max-width:850px;
+    margin-bottom:0;
+}
+
+.case-cta-section .btn{
+    white-space:nowrap;
+    flex-shrink:0;
+}
+
+/* =========================================
+   Chaotic Forecasting Comparison
+========================================= */
+.forecast-comparison p{
+    margin:0;
+    padding:12px 0;
+
+    border-bottom:1px solid var(--line);
+
+    line-height:1.5;
+}
+
+.forecast-comparison p:last-child{
+    border-bottom:0;
+    padding-bottom:0;
+}
+
+.forecast-comparison strong{
+    color:var(--text);
+    font-size:1rem;
+}
+
+.sidebar{
+    position:sticky;
+    top:96px;
+    height:max-content;
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.chaos-hero-visual{
+    margin-top:40px;
+    width:100%;
+
+    min-height:0;    
+    height:auto;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:28px;
+
+    background:#0B151B;
+}
+
+.chaos-hero-visual img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/* =========================================
+   Chaotic System Forecasting — Spacing
+========================================= */
+
+.chaos-case-head{
+    padding-bottom:20px;
+}
+
+.chaos-case-content{
+    padding-top:0;
+    padding-bottom:80px;
+}
+
+.chaos-case-content .case-section:first-child{
+    padding-top:24px;
+}
+
+/* =========================================
+   Chaotic Case — Header Width
+========================================= */
+
+.chaos-case-head h1{
+    max-width:none;
+    width:100%;
+    white-space:nowrap;
+    font-size:clamp(52px, 5.6vw, 86px);
+}
+
+.chaos-case-head .case-lead{
+    max-width:1150px;
+}
+
+
+/* Allow natural wrapping on smaller screens */
+@media (max-width:1100px){
+
+    .chaos-case-head h1{
+        white-space:normal;
+        font-size:clamp(48px, 7vw, 76px);
+    }
+
+    .chaos-case-head .case-lead{
+        max-width:900px;
+    }
+}
+
+/* =========================================
+   Chaotic Case — Experimental Evidence
+========================================= */
+
+.chaos-evidence-section{
+    padding-bottom:20px;
+}
+
+.chaos-evidence-intro{
+    max-width:850px;
+    margin-bottom:28px;
+}
+
+
+/* Stack research figures vertically */
+
+.chaos-evidence-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+}
+
+
+/* Research figure card */
+
+.chaos-evidence-card{
+    margin:0;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.035),
+            rgba(17,31,39,.72)
+        );
+}
+
+
+/* Figure container */
+
+.chaos-evidence-image{
+    width:100%;
+
+    overflow:hidden;
+
+    background:#091619;
+
+    border-bottom:1px solid var(--line);
+}
+
+
+/* Scientific plot */
+
+.chaos-evidence-image img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+}
+
+
+/* Figure description */
+
+.chaos-evidence-card figcaption{
+    padding:22px 24px 24px;
+}
+
+
+.chaos-evidence-label{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.13em;
+}
+
+
+.chaos-evidence-card h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-size:20px;
+    line-height:1.3;
+}
+
+
+.chaos-evidence-card p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* Mobile */
+
+@media (max-width:680px){
+
+    .chaos-evidence-grid{
+        gap:20px;
+    }
+
+    .chaos-evidence-card{
+        border-radius:16px;
+    }
+
+    .chaos-evidence-card figcaption{
+        padding:18px;
+    }
+
+}
+
+
+/* =========================================
+   Predictive Maintenance — Header
+========================================= */
+
+.predictive-case-head h1{
+    width:100%;
+    max-width:1180px;
+
+    white-space:normal;
+
+    font-size:clamp(52px, 4.7vw, 74px);
+    line-height:1.04;
+
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+
+/* Description */
+
+.predictive-case-head .case-lead{
+    width:100%;
+    max-width:1200px;
+}
+
+
+/* Back link + eyebrow */
+
+.predictive-header-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:18px;
+    margin-bottom:34px;
+}
+
+.predictive-header-meta .back,
+.predictive-header-meta .case-eyebrow{
+    display:block;
+}
+
+
+/* Cover */
+
+.predictive-case-head .predictive-cover{
+    width:100%;
+    height:auto;
+
+    aspect-ratio:16 / 7;
+
+    overflow:hidden;
+
+    border-radius:22px;
+    border:1px solid var(--line);
+
+    background:var(--panel);
+}
+
+.predictive-case-head .predictive-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+/* ========================================
+   Predictive Maintenance — Evidence
+======================================== */
+
+.predictive-evidence{
+    margin-top:10px;
+}
+
+.evidence-intro{
+    margin-bottom:28px;
+}
+
+.predictive-evidence-card{
+    margin:0 0 28px;
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:var(--panel);
+}
+
+.predictive-evidence-card img{
+    width:100%;
+    height:auto;
+    display:block;
+
+    object-fit:contain;
+    background:#fff;
+}
+
+.predictive-evidence-card figcaption{
+    padding:22px 26px 25px;
+}
+
+.predictive-evidence-card .evidence-label{
+    display:block;
+    margin-bottom:10px;
+
+    color:var(--accent);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.13em;
+}
+
+.predictive-evidence-card h3{
+    margin:0 0 10px;
+
+    color:var(--text);
+    font-size:22px;
+    line-height:1.3;
+}
+
+.predictive-evidence-card p{
+    margin:0;
+
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.7;
+}
+
+
+/* Mobile */
+
+@media (max-width:680px){
+
+    .predictive-evidence-card figcaption{
+        padding:19px 20px 22px;
+    }
+
+    .predictive-evidence-card h3{
+        font-size:20px;
+    }
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width:900px){
+
+    .predictive-case-head h1{
+        font-size:clamp(48px, 8vw, 68px);
+    }
+
+    .predictive-case-head .predictive-cover{
+        aspect-ratio:16 / 8;
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width:680px){
+
+    .predictive-case-head h1{
+        font-size:clamp(40px, 11vw, 56px);
+        line-height:1.05;
+    }
+
+    .predictive-case-head .case-lead{
+        max-width:100%;
+    }
+
+    .predictive-header-meta{
+        gap:14px;
+        margin-bottom:26px;
+    }
+
+    .predictive-case-head .predictive-cover{
+        aspect-ratio:16 / 10;
+    }
+
+}
+
+
+.predictive-case-content{
+    padding-top:0;
+    padding-bottom:80px;
+}
+
+.predictive-case-content .case-section:first-child{
+    padding-top:24px;
+}
+
+
+/* Main metric */
+
+.predictive-metric strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:3.2rem;
+    line-height:.95;
+
+    color:var(--accent);
+}
+
+
+.predictive-metric-title{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text) !important;
+
+    font-size:1rem !important;
+    font-weight:700;
+
+    line-height:1.35;
+}
+
+
+.predictive-metric-sub{
+    display:block;
+
+    color:var(--muted) !important;
+
+    font-size:.84rem !important;
+    line-height:1.45;
+}
+
+
+/* GitHub button */
+
+.predictive-github{
+    display:flex;
+}
+
+.predictive-github .btn{
+    width:auto;
+}
+
+
+/* Mobile */
+
+@media (max-width:680px){
+
+    .predictive-case-content{
+        padding-bottom:60px;
+    }
+
+    .predictive-metric strong{
+        font-size:2.8rem;
+    }
+
+}
+
+/* =========================================
+   Oil Spill Semantic Segmentation
+========================================= */
+
+
+/* Header */
+
+.oil-case-head h1{
+    width:100%;
+    max-width:1180px;
+
+    white-space:normal;
+
+    font-size:clamp(52px, 5vw, 78px);
+    line-height:1.04;
+
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+
+.oil-case-head .case-lead{
+    width:100%;
+    max-width:1100px;
+}
+
+
+/* Back link + eyebrow */
+
+.oil-header-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:18px;
+    margin-bottom:34px;
+}
+
+.oil-header-meta .back,
+.oil-header-meta .case-eyebrow{
+    display:block;
+}
+
+
+/* Cover */
+
+.oil-case-head .oil-cover{
+    width:100%;
+    height:auto;
+
+    min-height:0;
+
+    aspect-ratio:16 / 7;
+
+    overflow:hidden;
+
+    border-radius:22px;
+    border:1px solid var(--line);
+
+    background:var(--panel);
+}
+
+.oil-case-head .oil-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+
+/* Main content spacing */
+
+.oil-case-content{
+    padding-top:0;
+    padding-bottom:80px;
+}
+
+.oil-case-content .case-section:first-child{
+    padding-top:24px;
+}
+
+
+/* Sidebar metric */
+
+.oil-metric strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:3.2rem;
+    line-height:.95;
+
+    color:var(--accent);
+}
+
+.oil-metric-title{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text) !important;
+
+    font-size:1rem !important;
+    font-weight:700;
+
+    line-height:1.35;
+}
+
+.oil-metric-sub{
+    display:block;
+
+    color:var(--muted) !important;
+
+    font-size:.84rem !important;
+    line-height:1.45;
+}
+
+
+/* Project context */
+
+.oil-context{
+    margin-top:14px !important;
+    line-height:1.7;
+}
+
+
+/* GitHub */
+
+.oil-github{
+    display:flex;
+}
+
+.oil-github .btn{
+    width:auto;
+}
+
+
+/* Evidence */
+
+.oil-evidence-intro{
+    max-width:850px;
+    margin-bottom:28px;
+}
+
+.oil-evidence-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+
+    gap:14px;
+}
+
+
+/* Tablet */
+
+@media (max-width:900px){
+
+    .oil-case-head h1{
+        font-size:clamp(48px, 8vw, 68px);
+    }
+
+    .oil-case-head .oil-cover{
+        aspect-ratio:16 / 8;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:680px){
+
+    .oil-case-head h1{
+        font-size:clamp(40px, 11vw, 56px);
+        line-height:1.05;
+    }
+
+    .oil-case-head .case-lead{
+        max-width:100%;
+    }
+
+    .oil-header-meta{
+        gap:14px;
+        margin-bottom:26px;
+    }
+
+    .oil-case-head .oil-cover{
+        aspect-ratio:16 / 10;
+    }
+
+    .oil-case-content{
+        padding-bottom:60px;
+    }
+
+    .oil-metric strong{
+        font-size:2.8rem;
+    }
+
+    .oil-evidence-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================================
+   Skin Cancer Classification
+========================================= */
+
+
+/* =========================================
+   Header
+========================================= */
+
+.skin-case-head h1{
+    width:100%;
+    max-width:1180px;
+
+    white-space:normal;
+
+    font-size:clamp(52px, 5.2vw, 80px);
+    line-height:1.04;
+
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+
+.skin-case-head .case-lead{
+    width:100%;
+    max-width:1100px;
+}
+
+
+/* Back + eyebrow */
+
+.skin-header-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:34px;
+}
+
+.skin-header-meta .back,
+.skin-header-meta .case-eyebrow{
+    display:block;
+}
+
+
+/* =========================================
+   Skin Cancer — Hero Cover
+========================================= */
+
+.skin-case-head .skin-cover{
+    width:100%;
+    height:auto;
+    min-height:0;
+
+    aspect-ratio:16 / 7;
+
+    overflow:hidden;
+
+    border-radius:22px;
+    border:1px solid var(--line);
+
+    background:#0a1518;
+}
+
+.skin-case-head .skin-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+
+/* =========================================
+   Main Content Spacing
+========================================= */
+
+.skin-case-content{
+    padding-top:0;
+    padding-bottom:80px;
+}
+
+.skin-case-content .case-section:first-child{
+    padding-top:24px;
+}
+
+
+/* =========================================
+   Sidebar Metrics
+========================================= */
+
+.skin-metric strong,
+.skin-class-metric strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:3rem;
+    line-height:.95;
+
+    color:var(--accent);
+}
+
+
+.skin-metric-title{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text) !important;
+
+    font-size:1rem !important;
+    font-weight:700;
+
+    line-height:1.35;
+}
+
+
+.skin-metric-sub{
+    display:block;
+
+    color:var(--muted) !important;
+
+    font-size:.84rem !important;
+    line-height:1.45;
+}
+
+
+/* Slight variation for second metric */
+
+.skin-class-metric{
+    background:
+        linear-gradient(
+            180deg,
+            rgba(12,29,33,.92),
+            rgba(9,21,25,.92)
+        );
+}
+
+
+/* =========================================
+   Research Disclaimer
+========================================= */
+
+.skin-research-card p{
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:.88rem;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   GitHub
+========================================= */
+
+.skin-github{
+    display:flex;
+}
+
+.skin-github .btn{
+    width:auto;
+}
+
+
+/* =========================================
+   Experimental Evidence
+========================================= */
+
+.skin-evidence-intro{
+    max-width:850px;
+
+    margin-bottom:28px;
+}
+
+
+.skin-evidence-card{
+    margin:0 0 28px;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:var(--panel);
+}
+
+
+.skin-evidence-image{
+    width:100%;
+
+    overflow:hidden;
+
+    border-bottom:1px solid var(--line);
+
+    background:#fff;
+}
+
+
+.skin-evidence-image img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+}
+
+
+.skin-evidence-card figcaption{
+    padding:22px 26px 25px;
+}
+
+
+.skin-evidence-label{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.13em;
+}
+
+
+.skin-evidence-card h3,
+.skin-interface-placeholder h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-size:21px;
+    line-height:1.3;
+}
+
+
+.skin-evidence-card p,
+.skin-interface-placeholder p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14.5px;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   Interface Video Placeholder
+========================================= */
+
+.skin-interface-placeholder{
+    padding:26px;
+
+    border:1px dashed rgba(105,209,206,.28);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.035),
+            rgba(17,31,39,.65)
+        );
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width:900px){
+
+    .skin-case-head h1{
+        font-size:clamp(48px, 8vw, 68px);
+    }
+
+    .skin-case-head .skin-cover{
+        aspect-ratio:16 / 8;
+    }
+
+}
+
+/* =========================================
+   Skin Cancer — Dataset Sample
+========================================= */
+
+.skin-sample-image{
+    aspect-ratio:16 / 8;
+    background:#0a1518;
+}
+
+.skin-sample-image img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:38% 42%;
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width:680px){
+
+    .skin-case-head h1{
+        font-size:clamp(40px, 11vw, 56px);
+        line-height:1.05;
+    }
+
+    .skin-case-head .case-lead{
+        max-width:100%;
+    }
+
+    .skin-header-meta{
+        gap:14px;
+        margin-bottom:26px;
+    }
+
+    .skin-case-head .skin-cover{
+        aspect-ratio:16 / 10;
+    }
+
+    .skin-case-content{
+        padding-bottom:60px;
+    }
+
+    .skin-metric strong,
+    .skin-class-metric strong{
+        font-size:2.7rem;
+    }
+
+    .skin-evidence-card figcaption{
+        padding:19px 20px 22px;
+    }
+
+    .skin-interface-placeholder{
+        padding:22px 20px;
+    }
+
+}
+
+
+/* =========================================
+   Skin Cancer — Interface Demonstration
+========================================= */
+
+.skin-interface-card{
+    margin-top:28px;
+}
+
+.skin-interface-video{
+    width:100%;
+    overflow:hidden;
+
+    background:#05090b;
+
+    border-bottom:1px solid var(--line);
+}
+
+.skin-interface-video video{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    max-height:650px;
+
+    object-fit:contain;
+
+    background:#05090b;
+}
+
+/* =========================================
+   Weather Forecasting Case Study
+========================================= */
+
+
+/* =========================================
+   Header
+========================================= */
+
+.weather-case-head h1{
+    width:100%;
+    max-width:1180px;
+
+    white-space:normal;
+
+    font-size:clamp(52px, 5.4vw, 82px);
+    line-height:1.04;
+
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+
+.weather-case-head .case-lead{
+    width:100%;
+    max-width:1150px;
+}
+
+
+/* Back link + eyebrow */
+
+.weather-header-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:34px;
+}
+
+
+.weather-header-meta .back,
+.weather-header-meta .case-eyebrow{
+    display:block;
+}
+
+
+/* =========================================
+   Hero Cover
+========================================= */
+
+.weather-case-head .weather-cover{
+    width:100%;
+    height:auto;
+
+    min-height:0;
+
+    aspect-ratio:16 / 7;
+
+    overflow:hidden;
+
+    border-radius:22px;
+    border:1px solid var(--line);
+
+    background:#0a1518;
+}
+
+
+.weather-case-head .weather-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+
+/* =========================================
+   Main Content Spacing
+========================================= */
+
+.weather-case-content{
+    padding-top:0;
+    padding-bottom:80px;
+}
+
+
+.weather-case-content .case-section:first-child{
+    padding-top:24px;
+}
+
+
+/* =========================================
+   Sidebar Metric
+========================================= */
+
+.weather-metric strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:3.1rem;
+    line-height:.95;
+
+    color:var(--accent);
+}
+
+
+.weather-metric-title{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text) !important;
+
+    font-size:1rem !important;
+    font-weight:700;
+
+    line-height:1.35;
+}
+
+
+.weather-metric-sub{
+    display:block;
+
+    color:var(--muted) !important;
+
+    font-size:.84rem !important;
+    line-height:1.5;
+}
+
+
+.weather-context-card p{
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:.88rem;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   GitHub
+========================================= */
+
+.weather-github{
+    display:flex;
+}
+
+
+.weather-github .btn{
+    width:auto;
+}
+
+
+/* =========================================
+   Experimental Evidence
+========================================= */
+
+.weather-evidence-intro{
+    max-width:860px;
+
+    margin-bottom:28px;
+}
+
+
+.weather-evidence-card{
+    margin:0 0 28px;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:var(--panel);
+}
+
+
+.weather-evidence-image{
+    width:100%;
+
+    overflow:hidden;
+
+    border-bottom:1px solid var(--line);
+
+    background:#fff;
+}
+
+
+.weather-evidence-image img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+}
+
+
+.weather-evidence-card figcaption{
+    padding:22px 26px 25px;
+}
+
+
+.weather-evidence-label{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.13em;
+}
+
+
+.weather-evidence-card h3,
+.weather-interface-placeholder h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-size:21px;
+    line-height:1.3;
+}
+
+
+.weather-evidence-card p,
+.weather-interface-placeholder p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14.5px;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   Interface Placeholder
+========================================= */
+
+.weather-interface-placeholder{
+    padding:26px;
+
+    border:1px dashed rgba(105,209,206,.28);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.035),
+            rgba(17,31,39,.65)
+        );
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width:900px){
+
+    .weather-case-head h1{
+        font-size:clamp(48px, 8vw, 68px);
+    }
+
+    .weather-case-head .weather-cover{
+        aspect-ratio:16 / 8;
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width:680px){
+
+    .weather-case-head h1{
+        font-size:clamp(40px, 11vw, 56px);
+        line-height:1.05;
+    }
+
+    .weather-case-head .case-lead{
+        max-width:100%;
+    }
+
+    .weather-header-meta{
+        gap:14px;
+        margin-bottom:26px;
+    }
+
+    .weather-case-head .weather-cover{
+        aspect-ratio:16 / 10;
+    }
+
+    .weather-case-content{
+        padding-bottom:60px;
+    }
+
+    .weather-metric strong{
+        font-size:2.7rem;
+    }
+
+    .weather-evidence-card figcaption{
+        padding:19px 20px 22px;
+    }
+
+    .weather-interface-placeholder{
+        padding:22px 20px;
+    }
+
+}
+
+.weather-interface-video{
+    width:100%;
+    overflow:hidden;
+    background:#000;
+    border-bottom:1px solid var(--line);
+}
+
+.weather-interface-video video{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:16 / 9;
+    object-fit:contain;
+    background:#000;
+}
+
+
+/* =========================================
+   Resume Screening System
+========================================= */
+
+
+/* =========================================
+   Header
+========================================= */
+
+.resume-case-head h1{
+    width:100%;
+    max-width:1180px;
+
+    white-space:normal;
+
+    font-size:clamp(52px, 5.4vw, 82px);
+    line-height:1.04;
+
+    overflow-wrap:normal;
+    word-break:normal;
+}
+
+
+.resume-case-head .case-lead{
+    width:100%;
+    max-width:1150px;
+}
+
+
+/* Back link + eyebrow */
+
+.resume-header-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:34px;
+}
+
+
+.resume-header-meta .back,
+.resume-header-meta .case-eyebrow{
+    display:block;
+}
+
+
+/* =========================================
+   Hero Cover
+========================================= */
+
+.resume-case-head .resume-cover{
+    width:100%;
+    height:auto;
+
+    min-height:0;
+
+    aspect-ratio:16 / 7;
+
+    overflow:hidden;
+
+    border-radius:22px;
+    border:1px solid var(--line);
+
+    background:#0a1518;
+}
+
+
+.resume-case-head .resume-cover img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+
+/* =========================================
+   Main Content
+========================================= */
+
+.resume-case-content{
+    padding-top:0;
+    padding-bottom:80px;
+}
+
+
+.resume-case-content .case-section:first-child{
+    padding-top:24px;
+}
+
+
+/* =========================================
+   Sidebar Metrics
+========================================= */
+
+.resume-metric strong,
+.resume-category-metric strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:3rem;
+    line-height:.95;
+
+    color:var(--accent);
+}
+
+
+.resume-metric-title{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--text) !important;
+
+    font-size:1rem !important;
+    font-weight:700;
+
+    line-height:1.35;
+}
+
+
+.resume-metric-sub{
+    display:block;
+
+    color:var(--muted) !important;
+
+    font-size:.84rem !important;
+    line-height:1.5;
+}
+
+
+.resume-category-metric{
+    background:
+        linear-gradient(
+            180deg,
+            rgba(12,29,33,.92),
+            rgba(9,21,25,.92)
+        );
+}
+
+
+/* =========================================
+   Workflow Card
+========================================= */
+
+.resume-context-card p{
+    margin-top:14px;
+
+    color:var(--muted);
+
+    font-size:.88rem;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   GitHub
+========================================= */
+
+.resume-github{
+    display:flex;
+}
+
+
+.resume-github .btn{
+    width:auto;
+}
+
+
+/* =========================================
+   Evidence
+========================================= */
+
+.resume-evidence-intro{
+    max-width:850px;
+
+    margin-bottom:28px;
+}
+
+
+.resume-interface-placeholder{
+    padding:26px;
+
+    border:1px dashed rgba(105,209,206,.28);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(105,209,206,.035),
+            rgba(17,31,39,.65)
+        );
+}
+
+
+.resume-evidence-label{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.13em;
+}
+
+
+.resume-interface-placeholder h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-size:21px;
+    line-height:1.3;
+}
+
+
+.resume-interface-placeholder p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14.5px;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width:900px){
+
+    .resume-case-head h1{
+        font-size:clamp(48px, 8vw, 68px);
+    }
+
+    .resume-case-head .resume-cover{
+        aspect-ratio:16 / 8;
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width:680px){
+
+    .resume-case-head h1{
+        font-size:clamp(40px, 11vw, 56px);
+        line-height:1.05;
+    }
+
+    .resume-case-head .case-lead{
+        max-width:100%;
+    }
+
+    .resume-header-meta{
+        gap:14px;
+        margin-bottom:26px;
+    }
+
+    .resume-case-head .resume-cover{
+        aspect-ratio:16 / 10;
+    }
+
+    .resume-case-content{
+        padding-bottom:60px;
+    }
+
+    .resume-metric strong,
+    .resume-category-metric strong{
+        font-size:2.7rem;
+    }
+
+    .resume-interface-placeholder{
+        padding:22px 20px;
+    }
+
+}
+
+/* =========================================
+   Resume Screening — Evidence
+========================================= */
+
+.resume-evidence-intro{
+    max-width:850px;
+    margin-bottom:28px;
+}
+
+
+.resume-evidence-card{
+    margin:0 0 28px;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:var(--panel);
+}
+
+
+.resume-evidence-image{
+    width:100%;
+
+    overflow:hidden;
+
+    border-bottom:1px solid var(--line);
+
+    background:#fff;
+}
+
+
+.resume-evidence-image img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+}
+
+
+.resume-evidence-card figcaption{
+    padding:22px 26px 25px;
+}
+
+
+.resume-evidence-label{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--accent);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:.13em;
+}
+
+
+.resume-evidence-card h3{
+    margin:0 0 9px;
+
+    color:var(--text);
+
+    font-size:21px;
+    line-height:1.3;
+}
+
+
+.resume-evidence-card p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14.5px;
+    line-height:1.7;
+}
+
+
+@media (max-width:680px){
+
+    .resume-evidence-card figcaption{
+        padding:19px 20px 22px;
+    }
+
+}
+
+.oil-demo-section {
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.oil-demo-section .section-heading {
+  margin-bottom: 28px;
+}
+
+.oil-demo-section .section-heading h2 {
+  margin: 8px 0 12px;
+}
+
+.oil-demo-section .section-heading p {
+  max-width: 780px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.oil-demo-video {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #000;
+}
+
+.oil-demo-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
 }

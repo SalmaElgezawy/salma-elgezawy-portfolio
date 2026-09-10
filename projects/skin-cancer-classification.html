@@ -1,24 +1,693 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skin Cancer Classification | Salma Elgezawy</title>
-<meta name="description" content="A research-oriented multimodal classification prototype combining dermatoscopic imagery with tabular metadata across seven lesion classes.">
-<meta property="og:title" content="Skin Cancer Classification | Salma Elgezawy">
-<meta property="og:description" content="A research-oriented multimodal classification prototype combining dermatoscopic imagery with tabular metadata across seven lesion classes.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#071013">
-<link rel="stylesheet" href="../assets/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        Skin Cancer Classification | Salma Elgezawy
+    </title>
+
+    <meta
+        name="description"
+        content="A research-oriented multimodal skin-lesion classification prototype combining dermatoscopic imagery with tabular metadata across seven lesion classes."
+    >
+
+    <meta
+        property="og:title"
+        content="Skin Cancer Classification | Salma Elgezawy"
+    >
+
+    <meta
+        property="og:description"
+        content="A research-oriented multimodal skin-lesion classification prototype combining dermatoscopic imagery with tabular metadata across seven lesion classes."
+    >
+
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#071013">
+
+    <link rel="stylesheet" href="../assets/style.css">
+
 </head>
+
+
 <body>
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="../index.html#home">Salma Elgezawy</a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu</button>
-<div class="nav-links">
-<a href="../index.html#home">Home</a><a href="../index.html#services">Services</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#achievements">Achievements</a><a href="../index.html#about">About</a>
-</div></div></nav><main><section class="case-head"><div class="container"><a class="back" href="../index.html#projects">← Back to Projects</a><span class="eyebrow">Multimodal Deep Learning Research Prototype</span><h1>Skin Cancer Classification</h1><p class="lead">A research-oriented multimodal classification prototype combining dermatoscopic imagery with tabular metadata across seven lesion classes.</p><div class="tags"><span class="tag">Deep Learning</span><span class="tag">Computer Vision</span><span class="tag">Multimodal ML</span><span class="tag">Medical AI Research</span></div><div class="case-visual cover cover-medical"></div></div></section>
-<section class="section" style="padding-top:30px"><div class="container case-layout"><div><section class="case-section"><h2>The Problem</h2><p class="muted">Dermatoscopic classification is challenging because visual patterns can be subtle, class distributions can be imbalanced, and useful context may also exist in metadata.</p></section><section class="case-section"><h2>The Approach</h2><ul><li>HAM10000 dataset with seven lesion classes.</li><li>Image preprocessing, augmentation, class-imbalance handling, and exploratory analysis.</li><li>CNN-based visual branch combined with a tabular metadata branch.</li><li>Multimodal feature fusion before classification.</li><li>Flask interface for image upload and prediction.</li></ul></section><section class="case-section"><h2>Technical Decisions</h2><ul><li>The project combines visual and tabular information instead of relying on images alone.</li><li>Data augmentation and resampling address limited and imbalanced class representation.</li><li>The application is presented strictly as a research/educational prototype, not a clinical diagnostic system.</li></ul></section><section class="case-section"><h2>Results</h2><p class="muted">The project demonstrates multimodal deep learning, image classification, class-imbalance handling, and application integration.</p></section><section class="case-section"><h2>Why It Matters</h2><p class="muted">It provides a concrete example of combining heterogeneous data modalities in a sensitive classification domain while keeping claims appropriately limited.</p></section><section class="case-section"><h2>Visual Evidence</h2><p class="muted">Replace these placeholders with real screenshots, plots, hardware photos, or project videos.</p><div class="media-grid"><div class="media-ph">EDA Figure</div><div class="media-ph">Dermatoscopic Sample</div><div class="media-ph">Model Output</div><div class="media-ph">Flask Interface</div></div></section></div><aside class="sidebar"><div class="card" style="margin-top:14px"><strong>Research prototype</strong><p class="muted">This project is not a clinically validated diagnostic system and is not intended to replace medical professionals.</p></div><div class="card"><span class="eyebrow">Technology Stack</span><div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">CNN</span><span class="chip">Multimodal Learning</span><span class="chip">Albumentations</span><span class="chip">Flask</span></div></div><div style="margin-top:14px"><a class="btn btn-secondary" href="https://github.com/SalmaElgezawy/Skin_Cancer_classification" target="_blank" rel="noopener">View on GitHub ↗</a></div></aside></div></section>
-<section class="section"><div class="container"><div class="cta"><div><h2>Need a Similar Solution?</h2><p class="muted">If your project involves data, machine learning, forecasting, computer vision, NLP, or intelligent engineering systems, let’s discuss the problem and the right technical approach.</p></div><a class="btn btn-primary" href="https://golance.com/freelancer/salma.elgezawy" target="_blank" rel="noopener">Discuss Your Project ↗</a></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div><strong>Salma Elgezawy — AI/ML Engineer</strong><br>Available for Remote Projects Worldwide</div><div>© Salma Elgezawy</div></div></footer>
-<script src="../assets/site.js"></script></body></html>
+
+
+<!-- =========================
+     Navigation
+========================= -->
+
+<nav class="nav">
+
+    <div class="container nav-inner">
+
+        <a class="brand" href="../index.html#home">
+            Salma Elgezawy
+        </a>
+
+        <button class="menu-btn" aria-label="Toggle navigation">
+            Menu
+        </button>
+
+        <div class="nav-links">
+
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#achievements">Achievements</a>
+            <a href="../index.html#about">About</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+
+<!-- =========================
+     Case Study Header
+========================= -->
+
+<section class="case-head skin-case-head">
+
+    <div class="container">
+
+
+        <div class="skin-header-meta">
+
+            <a class="back" href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+            <span class="case-eyebrow">
+                MULTIMODAL DEEP LEARNING RESEARCH PROTOTYPE
+            </span>
+
+        </div>
+
+
+        <h1>
+            Skin Cancer Classification
+        </h1>
+
+
+        <p class="lead case-lead">
+            A research-oriented multimodal skin-lesion classification prototype
+            combining dermatoscopic imagery with tabular metadata across seven
+            lesion classes.
+        </p>
+
+
+        <div class="tags">
+
+            <span class="tag">
+                Deep Learning
+            </span>
+
+            <span class="tag">
+                Computer Vision
+            </span>
+
+            <span class="tag">
+                Multimodal ML
+            </span>
+
+            <span class="tag">
+                Medical AI Research
+            </span>
+
+        </div>
+
+
+            <!-- Main Visual -->
+
+            <div class="case-visual skin-cover">
+
+                <img
+                    src="../assets/skin_cancer.png"
+                    alt="Dermatoscopic skin-lesion image from the HAM10000 dataset"
+                >
+
+            </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     Case Study Content
+========================= -->
+
+<section class="section skin-case-content">
+
+    <div class="container case-layout">
+
+
+        <!-- Main Content -->
+
+        <div>
+
+
+            <!-- =========================
+                 Problem
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Problem
+                </h2>
+
+                <p class="muted">
+                    Skin-lesion classification from dermatoscopic imagery is
+                    challenging because visual differences between lesion types
+                    can be subtle, while the dataset itself contains substantial
+                    class imbalance. Additional context such as age, sex, and
+                    lesion localization can also provide information that is not
+                    directly visible in the image.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Approach
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    The Approach
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Analysis of the HAM10000 dataset containing 10,015
+                        dermatoscopic images across seven lesion classes.
+                    </li>
+
+                    <li>
+                        Exploratory analysis of lesion type, age, sex, and
+                        anatomical localization distributions.
+                    </li>
+
+                    <li>
+                        Image preprocessing, augmentation, and class-imbalance
+                        handling to improve representation of minority classes.
+                    </li>
+
+                    <li>
+                        A CNN-based visual branch for extracting image features
+                        from dermatoscopic images.
+                    </li>
+
+                    <li>
+                        A separate metadata branch for tabular patient and
+                        lesion-related features.
+                    </li>
+
+                    <li>
+                        Multimodal feature fusion before the final lesion-class
+                        prediction layer.
+                    </li>
+
+                    <li>
+                        A Flask interface for image upload and prototype inference.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Technical Decisions
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    Technical Decisions
+                </h2>
+
+                <ul>
+
+                    <li>
+                        Visual and tabular information were modeled together
+                        rather than relying on dermatoscopic imagery alone.
+                    </li>
+
+                    <li>
+                        Exploratory data analysis was used to identify severe
+                        class imbalance before model development.
+                    </li>
+
+                    <li>
+                        Data augmentation and resampling strategies were used
+                        to improve exposure to underrepresented lesion classes.
+                    </li>
+
+                    <li>
+                        The project is presented as a research and educational
+                        classification prototype rather than a clinically
+                        validated diagnostic system.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Results
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    Results
+                </h2>
+
+                <p class="muted">
+                    The project produced an end-to-end multimodal classification
+                    workflow combining dermatoscopic imagery and structured
+                    metadata, from exploratory analysis and preprocessing through
+                    model training and prototype application integration.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Why It Matters
+            ========================= -->
+
+            <section class="case-section">
+
+                <h2>
+                    Why It Matters
+                </h2>
+
+                <p class="muted">
+                    This project demonstrates how heterogeneous data modalities
+                    can be combined within a deep-learning pipeline. It also
+                    highlights practical challenges such as class imbalance,
+                    multimodal feature fusion, and careful evaluation in a
+                    sensitive medical-imaging domain.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Experimental Evidence
+            ========================= -->
+
+            <section class="case-section skin-evidence">
+
+                <h2>
+                    Experimental Evidence
+                </h2>
+
+                <p class="muted skin-evidence-intro">
+                    A representative dermatoscopic sample, dataset exploration, training
+                    diagnostics, and prototype demonstration provide a closer look at the
+                    data and development workflow behind the multimodal classification system.
+                </p>
+
+                <!-- Dataset Sample -->
+
+                <figure class="skin-evidence-card skin-sample-card">
+
+                    <div class="skin-evidence-image skin-sample-image">
+
+                        <img
+                            src="../assets/cancer_sample.jpg"
+                            alt="Example dermatoscopic skin-lesion image from the HAM10000 dataset"
+                        >
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="skin-evidence-label">
+                            DATASET SAMPLE
+                        </span>
+
+                        <h3>
+                            Dermatoscopic Image Example
+                        </h3>
+
+                        <p>
+                            A representative dermatoscopic image from the HAM10000 dataset,
+                            illustrating the type of visual input used by the image branch
+                            of the multimodal classification model.
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+                <!-- EDA -->
+
+                <figure class="skin-evidence-card">
+
+                    <div class="skin-evidence-image">
+
+                        <img
+                            src="../assets/cancer_EDA.png"
+                            alt="Exploratory analysis of lesion classes, localization, gender, and age in the HAM10000 dataset"
+                        >
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="skin-evidence-label">
+                            DATASET ANALYSIS
+                        </span>
+
+                        <h3>
+                            HAM10000 Dataset Exploration
+                        </h3>
+
+                        <p>
+                            Exploratory analysis of lesion-class frequencies,
+                            anatomical localization, sex distribution, and age
+                            distribution, highlighting the strong imbalance
+                            between lesion categories.
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- Training Behavior -->
+
+                <figure class="skin-evidence-card">
+
+                    <div class="skin-evidence-image">
+
+                        <img
+                            src="../assets/cancer_model_behavior.png"
+                            alt="Training and validation loss and accuracy curves for the skin-lesion classification model"
+                        >
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="skin-evidence-label">
+                            TRAINING DIAGNOSTICS
+                        </span>
+
+                        <h3>
+                            Model Training Behavior
+                        </h3>
+
+                        <p>
+                            Training and validation curves showing the evolution
+                            of classification loss and accuracy across training
+                            epochs.
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+
+                <!-- Interface Demonstration -->
+
+                <figure class="skin-evidence-card skin-interface-card">
+
+                    <div class="skin-interface-video">
+
+                        <video controls preload="metadata">
+                            <source
+                                src="../assets/videos/cancer_interface.mp4"
+                                type="video/mp4"
+                            >
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="skin-evidence-label">
+                            PROTOTYPE INTERFACE
+                        </span>
+
+                        <h3>
+                            Flask Prediction Interface
+                        </h3>
+
+                        <p>
+                            Demonstration of the Flask-based prototype workflow,
+                            from uploading a dermatoscopic image to generating
+                            a lesion-class prediction through the trained model.
+                        </p>
+
+                    </figcaption>
+
+                </figure>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             Sidebar
+        ========================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Dataset Size -->
+
+            <div class="metric skin-metric">
+
+                <strong>
+                    10,015
+                </strong>
+
+                <span class="skin-metric-title">
+                    Dermatoscopic Images
+                </span>
+
+                <span class="skin-metric-sub">
+                    HAM10000 dataset
+                </span>
+
+            </div>
+
+
+
+            <!-- Classes -->
+
+            <div class="metric skin-class-metric">
+
+                <strong>
+                    7
+                </strong>
+
+                <span class="skin-metric-title">
+                    Lesion Classes
+                </span>
+
+                <span class="skin-metric-sub">
+                    Multi-class classification
+                </span>
+
+            </div>
+
+
+
+            <!-- Research Context -->
+
+            <div class="card skin-research-card">
+
+                <span class="eyebrow">
+                    Research Prototype
+                </span>
+
+                <p>
+                    Educational and research-oriented classification prototype.
+                    It is not a clinically validated diagnostic system.
+                </p>
+
+            </div>
+
+
+
+            <!-- Technology Stack -->
+
+            <div class="card">
+
+                <span class="eyebrow">
+                    Technology Stack
+                </span>
+
+                <div class="chips">
+
+                    <span class="chip">
+                        Python
+                    </span>
+
+                    <span class="chip">
+                        TensorFlow
+                    </span>
+
+                    <span class="chip">
+                        CNN
+                    </span>
+
+                    <span class="chip">
+                        Multimodal Learning
+                    </span>
+
+                    <span class="chip">
+                        Albumentations
+                    </span>
+
+                    <span class="chip">
+                        Flask
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GitHub -->
+
+            <div class="skin-github">
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://github.com/SalmaElgezawy/Skin_Cancer_classification"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View on GitHub ↗
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section case-cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+
+            <div class="cta-copy">
+
+                <h2>
+                    Need a Similar Solution?
+                </h2>
+
+                <p class="muted">
+                    If your project involves image classification, computer
+                    vision, multimodal machine learning, or research-oriented
+                    AI prototyping, let’s discuss the problem and the right
+                    technical approach.
+                </p>
+
+            </div>
+
+
+            <a
+                class="btn btn-primary"
+                href="https://golance.com/freelancer/salma.elgezawy"
+                target="_blank"
+                rel="noopener"
+            >
+                Discuss Your Project ↗
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <strong>
+                Salma Elgezawy — AI/ML Engineer
+            </strong>
+
+            <br>
+
+            Available for Remote Projects Worldwide
+
+        </div>
+
+        <div>
+            © Salma Elgezawy
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../assets/site.js"></script>
+
+
+</body>
+
+</html>
