@@ -2229,13 +2229,14 @@ h1{
 }
 
 
-/* Cover */
+/* =========================================
+   Predictive Maintenance — Cover
+========================================= */
 
 .predictive-case-head .predictive-cover{
     width:100%;
     height:auto;
-
-    aspect-ratio:16 / 7;
+    min-height:0;
 
     overflow:hidden;
 
@@ -2247,11 +2248,11 @@ h1{
 
 .predictive-case-head .predictive-cover img{
     width:100%;
-    height:100%;
+    height:auto;
 
     display:block;
 
-    object-fit:cover;
+    object-fit:contain;
     object-position:center;
 }
 
